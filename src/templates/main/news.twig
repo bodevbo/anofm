@@ -1,0 +1,40 @@
+{% set news_data = [
+  {
+    'date': '14 sep',
+    'title': 'ANOFM mai aproape de tineri – întâlnire cu reprezentanții Clubului Studenților din Moldova',
+    'image': {'src': '/dist/images/news/news_1.png','alt': '1'}
+  },
+  {
+    'date': '9 sep',
+    'title': 'Ziua Internaționala a Tineretului – rezultatele campaniei',
+    'image': {'src': '/dist/images/news/news_2.png','alt': '2'}
+  },
+  {
+    'date': '3 sep',
+    'title': 'Piața muncii: Locuri vacante la 01.09.2019',
+    'image': {'src': '/dist/images/news/news_3.png','alt': '3'}
+  },
+  {
+    'date': '1 sep',
+    'title': 'ANOFM mai aproape de tineri – întâlnire cu reprezentanții Clubului Studenților din Moldova',
+    'image': {'src': '/dist/images/news/news_4.png','alt': '4'}
+  }
+] %}
+
+<section id="news">
+  <div class="container">
+    <div class="title">
+      <h2>
+        Ultimele noutăţi
+      </h2>
+    </div>
+    <div class="d-flex">
+      {% for news_item in news_data %}
+        {% include "news_card.twig" with news_item %}
+      {% endfor %}
+    </div>
+    <div class="link">
+      <a href="#">ARHIVA NOUTĂȚI</a>
+    </div>
+  </div>
+</section>

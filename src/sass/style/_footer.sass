@@ -1,0 +1,134 @@
+#menus
+  display: flex
+
+  h6
+    margin-bottom: 1.5rem
+    white-space: nowrap
+
+    a
+      color: $white
+      font-size: 1.8rem
+      font-weight: 900
+      line-height: 1.61
+
+
+  ul
+    li
+      margin-bottom: 1.5rem
+
+      a
+        opacity: 0.7
+        color: $white
+        font-size: 1.5rem
+        font-weight: 400
+        line-height: 1.6
+        margin-bottom: 24px
+
+  .menu
+    max-width: 165px
+    margin-right: 2.5rem
+
+    &:last-child
+      margin-right: 0
+
+  .logo
+    margin-right: 3.5rem
+
+#socials
+  display: flex
+  align-items: center
+  margin-bottom: 2rem
+
+  li
+    margin-left: 1.5rem
+
+
+#location, #copyright
+  display: flex
+  align-items: flex-start
+  max-width: calc(100% / 3)
+
+  img, &:before
+    margin-right: 12px
+
+  p
+    opacity: 0.7
+    font-size: 1.5rem
+    line-height: 1.6
+
+#copyright
+  p
+    opacity: 1
+
+
+  span
+    display: block
+    margin-top: 10px
+    opacity: 0.7
+
+  &:before
+    content: "\00a9"
+    font-size: 1.5rem
+    line-height: 1.6
+    margin-right: 8px
+
+#email, #fax, #anti-camera
+  a, span
+    color: $white
+    font-size: 1.5rem
+    line-height: 1.6
+
+  a
+    opacity: 0.7
+
+  span
+    font-weight: 500
+    margin-right: 5px
+
+#hotline, #visitors
+  display: flex
+  align-items: center
+  flex: 0 0 15%
+
+  p, span
+    white-space: nowrap
+    margin-bottom: 0
+    font-size: 15px
+    font-weight: 500
+
+  span:last-child
+    opacity: 0.7
+
+  img, svg
+    margin-right: 1.2rem
+
+#visitors:before
+  content: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAALCAYAAABLcGxfAAAAV0lEQVQoU2NkIAD+//8/gYGBQR+qrJCRYg3oJjIwMCSg2PD//3+QwH+QTYyMjAuJ0bAf5ixGRkbHUQ0MDIXYgtUAKZQu/P//X4WBgYEHKnaHgYFBApkPAGhBV9eoB0b1AAAAAElFTkSuQmCC")
+  margin-right: 10px
+
+footer
+  padding-bottom: 48px
+
+@media (max-width: 1199px)
+  #socials
+    margin-bottom: 0
+
+@media (max-width: 991px)
+  footer .second-layer
+    flex-wrap: wrap
+
+  #location, #copyright
+    flex: 100%
+    max-width: 100%
+    justify-content: center
+    text-align: center
+
+  #menus .menu
+    margin-right: 1.8rem
+
+    h6
+      text-align: center
+      white-space: unset
+
+    ul
+      display: none

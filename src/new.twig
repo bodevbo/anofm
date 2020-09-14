@@ -1,0 +1,20 @@
+{% extends "templates/page.twig" %}
+{% block page %}
+  <section>
+    <div class="container">
+      <div class="row">
+        <main class="col-sm-9">
+          {% include "templates/common/breadcrumb.twig" %}
+          {% include "templates/common/page_title.twig" with {
+            title: "Ziua Internaționala a Tineretului – rezultatele campaniei"
+          } %}
+          {% include "templates/new/content.twig" %}
+        </main>
+        <aside class="col-sm-3">
+
+          <nav class="side-nav"></nav>
+        </aside>
+      </div>
+    </div>
+  </section>
+{% endblock %}

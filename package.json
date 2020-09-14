@@ -1,0 +1,37 @@
+{
+  "name": "anofm-markup",
+  "version": "1.0.0",
+  "description": "Markup for anofm.md",
+  "main": "gulpfile.js",
+  "devDependencies": {
+    "browser-sync": "^2.26.12",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0",
+    "gulp-changed": "^4.0",
+    "gulp-imagemin": "^6.2",
+    "gulp-rename": "^1.4",
+    "gulp-sass": "^4.1",
+    "gulp-sourcemaps": "^2.6",
+    "gulp-twig": "^1.2",
+    "imagemin-jpegtran": "^6.0",
+    "imagemin-optipng": "^7.1",
+    "imagemin-svgo": "^7.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "compile": "gulp sass image twig"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sanchous98/anofm-markup.git"
+  },
+  "keywords": [
+    "Anofm"
+  ],
+  "author": "IT-LAB SRL",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Sanchous98/anofm-markup/issues"
+  },
+  "homepage": "https://github.com/Sanchous98/anofm-markup#readme"
+}

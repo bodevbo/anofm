@@ -1,0 +1,116 @@
+.content-wrapper
+  font-size: 1.8rem
+  line-height: 1.5
+  background-color: #fff
+  padding: 30px
+
+  time
+    display: inline-block
+    color: #aaaaaa
+    font-size: 1.2rem
+    font-weight: 700
+    letter-spacing: 0.89px
+    text-transform: uppercase
+    padding-top: 2rem
+    padding-bottom: 1.5rem
+
+  .main-image
+    width: 100%
+
+  p, blockquote
+    margin-bottom: 1.6rem
+
+  blockquote
+    border-left: 0
+    font-weight: 400
+    color: #6a6a6a
+    border-top: 1px solid rgba(0, 0, 0, 0.15)
+    border-bottom: 1px solid rgba(0, 0, 0, 0.15)
+    text-align: center
+    padding: 36px 64px
+
+    &:before
+      content: url("/dist/images/quote.svg")
+      display: block
+      padding-bottom: 1.5rem
+
+  ul
+    list-style: none
+
+    li:before
+      content: "\2022"
+      color: #287dc3
+      font-weight: 900
+      display: inline-block
+      width: 2.5rem
+      margin-left: 3.5rem
+
+  .content-footer
+    border-top: 1px solid rgba(0, 0, 0, 0.15)
+    margin-top: 4rem
+    display: flex
+    align-items: center
+    justify-content: space-between
+    padding-top: 4rem
+    flex-wrap: wrap-reverse
+
+    .link
+      margin-top: 0
+
+      a
+        max-width: 200px
+        width: 200px
+        margin: 0
+
+    .back a
+      color: #333
+      font-size: 14px
+      font-weight: 900
+      letter-spacing: 0.84px
+      text-transform: uppercase
+
+      &:before
+        content: ""
+        background-image: url("/dist/images/black_arrow.svg")
+        height: 16px
+        width: 10px
+        display: inline-block
+        vertical-align: sub
+        margin-right: 1rem
+
+    .social
+      display: flex
+      align-items: center
+      justify-content: center
+      flex-wrap: wrap
+
+      span
+        color: #aaa
+        font-size: 12px
+        font-weight: 700
+        letter-spacing: 0.89px
+        text-transform: uppercase
+
+      ul
+        display: flex
+        align-items: center
+        margin-bottom: 0
+
+        li
+          margin-left: 2rem
+
+          &:before
+            content: none
+
+.page-title h1
+  color: #333
+  font-size: 3.2rem
+  font-weight: 300
+
+
+@media (max-width: 991px)
+  .content-wrapper .content-footer
+    justify-content: center
+
+    .social
+      margin-bottom: 2.5rem

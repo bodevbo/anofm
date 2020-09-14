@@ -1,0 +1,13 @@
+<div class="image-container">
+  <img src="{{ item.image }}" alt="{{ item.alt }}">
+</div>
+<div class="overlay">
+  <div class="container">
+    <div class="overlay__container">
+      <time>{{ item.date|date("d M") }}</time>
+      <h1>{{ item.title }}</h1>
+      <p>{{ item.description }}</p>
+      <a href="#">MAI MULT</a>
+    </div>
+  </div>
+</div>

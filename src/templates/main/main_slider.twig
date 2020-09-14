@@ -1,0 +1,23 @@
+{% set items = [
+  {
+    'image' : "/dist/images/main_slider/1.png",
+    'alt' : 'Image 1',
+    'date' : '09.16',
+    'title': 'Topul celor mai bine plătite locuri de muncă vacante',
+    'description' : 'Agenția Națională pentru Ocuparea Forței de Muncă informează persoanele aflate în căutarea unui loc de muncă despre cele mai plătite joburi pe piața muncii la 16 septembrie 2019'
+  },
+  {
+    'image' : "/dist/images/main_slider/1.png",
+    'alt' : 'Image 1',
+    'date' : '09.16',
+    'title': 'Topul celor mai bine plătite locuri de muncă vacante',
+    'description' : 'Agenția Națională pentru Ocuparea Forței de Muncă informează persoanele aflate în căutarea unui loc de muncă despre cele mai plătite joburi pe piața muncii la 16 septembrie 2019'
+  },
+] %}
+<section id="main-slider">
+  {% for item in items %}
+    <div class="slide">
+      {% include "main_slider_item.twig" with item %}
+    </div>
+  {% endfor %}
+</section>

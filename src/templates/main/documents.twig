@@ -1,0 +1,31 @@
+{% set items = [
+  {
+    'type' : 'docx',
+    'title': 'Procedura de înregistrare a locurilor de',
+    'date' : '09.10'
+  },
+  {
+    'type' : 'docx',
+    'title': 'Piața muncii: Locuri vacante',
+    'date' : '08.21'
+  },
+  {
+    'type' : 'docx',
+    'title': 'Raport statistic',
+    'date' : '08.06'
+  },
+] %}
+
+<section id="documents">
+  <div class="title">
+    <h2>
+      Documente
+    </h2>
+    <a href="#">VEZI TOATE</a>
+  </div>
+  <div class="row">
+    {% for item in items %}
+      {% include "document.twig" with item %}
+    {% endfor %}
+  </div>
+</section>

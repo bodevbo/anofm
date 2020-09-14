@@ -1,0 +1,36 @@
+.btn
+	&.btn-default
+		border-color: $light-gray
+		background: transparent !important
+		&:hover
+	    	background: rgba(69,145,251, .1) !important
+
+.pagination .previous img
+	margin-right: 10px
+	vertical-align: baseline
+
+.pagination .next img
+	margin-left: 10px
+	vertical-align: baseline
+
+.pagination
+	ul
+		li
+			color: $light-blue
+			height: 39px
+			width: 39px
+			line-height: 3.9rem
+			text-align: center
+			&.active
+				background: $light-blue
+				color: $white
+				border-radius: 50%
+			a
+				color: $light-blue
+
+@media (max-width: $layout-breakpoint-xsmall)
+	.pagination .previous img
+		margin-right: 0
+
+	.pagination .next img
+		margin-left: 0

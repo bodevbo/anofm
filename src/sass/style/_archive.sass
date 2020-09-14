@@ -1,0 +1,78 @@
+.list-archive .content-wrapper
+	padding: 29px 22px
+	margin-bottom: 30px
+
+.meta
+	position: relative
+	margin-bottom: 25px
+	line-height: 1.5rem
+
+.meta a
+	position: absolute
+	top: 0
+	right: 0
+
+.list-title
+	height: 120px
+	overflow: hidden
+
+.list-title h2
+	font-size: 1.8rem
+	line-height: 2.9rem
+	font-weight: bold
+
+.list-title a
+	color: $dark-gray
+
+.list-archive .pic
+	overflow: hidden
+	height: 159px
+	position: relative
+
+.list-archive .pic img
+	position: absolute
+	transform: translate(-50%, -50%)
+	top: 50%
+	left: 50%
+	min-height: 100%
+	margin-right: auto
+	margin-left: auto 
+
+.title-aside
+	border-top: 6px solid $light-blue
+	padding: 2.3rem
+
+.title-aside h3
+	font-weight: $robota-light
+
+.aside-wrap
+	background-color: $white
+
+.aside-nav
+	ul
+		color:red
+		li
+			&.active
+				a
+					background-color: #F7F7F9
+					font-weight: bold
+					color: $dark-gray
+		a
+			display: block
+			padding: 1rem 2.5rem
+
+@media (min-width: $layout-breakpoint-small)
+	.mt-md--115
+		margin-top: -115px
+
+@media (max-width: $layout-breakpoint-xsmall)
+	.list-title
+		height: inherit
+
+	.list-archive .pic
+		height: inherit
+
+	.list-archive .pic img
+		position: static
+		transform: none
+		width: 100%

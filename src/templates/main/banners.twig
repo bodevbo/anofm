@@ -1,0 +1,36 @@
+{% set items = [
+  {
+    'image': {'src': '/dist/images/banners/phone.svg', 'alt': 'Phone'},
+    'title': '0 8000 1000 <br> Centrul de apel al ANOFM'
+  },
+  {
+    'image': {'src': '/dist/images/banners/angajeaza-te.svg', 'alt': 'Angajeaza-te'},
+    'title': 'Portalul locurilor <br> de muncă'
+  },
+  {
+    'image': {'src': '/dist/images/banners/angajeaza-te-2.svg', 'alt': 'Angajeaza-te'},
+    'title': 'Tîrgul locurilor de <br> muncă on-line'
+  },
+  {
+    'image': {'src': '/dist/images/banners/opm.svg', 'alt': 'OPM'},
+    'title': 'Observatorul Pieței <br> Muncii'
+  },
+  {
+    'image': {'src': '/dist/images/banners/migratie_legala.svg', 'alt': 'Migratie'},
+    'title': 'Migrația forței <br> de muncă'
+  },
+  {
+    'image': {'src': '/dist/images/banners/moldova.svg', 'alt': 'Moldova'},
+    'title': 'Adresele subdiviziunilor <br> teritoriale'
+  }
+] %}
+
+<section id="banners">
+  <div class="container">
+    <div id="banners__slider">
+      {% for item in items %}
+        {% include "banner_item.twig" with item %}
+      {% endfor %}
+    </div>
+  </div>
+</section>

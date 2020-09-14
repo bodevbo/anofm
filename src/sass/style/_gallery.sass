@@ -1,0 +1,105 @@
+#gallery-n-documents
+  background-image: linear-gradient(to right, #287dc3 50%, #eaeaef 0)
+  padding: 0
+
+#gallery
+  background-color: transparent
+  padding-right: 4.8rem
+  padding-top: 4rem
+
+  img
+    width: 100%
+
+  .slick-center
+    z-index: 999
+
+  .slick-slide:not(.slick-center)
+    opacity: 0.2
+
+  .title h2, a
+    color: #fff
+
+  .title
+    display: flex
+    align-items: center
+
+    h2
+      margin-right: auto
+      margin-top: 0.8rem
+
+    a
+      color: #fff
+      font-size: 1.4rem
+      font-weight: 900
+      letter-spacing: 0.84px
+      text-transform: uppercase
+      line-height: 0.5
+
+      &:after
+        content: url("/dist/images/link_arrow.svg")
+        filter: brightness(10)
+        margin-left: 1.5rem
+        vertical-align: text-top
+
+  .slick-dots
+    display: flex !important
+    justify-content: center
+    margin-bottom: 0
+
+    li
+      margin-left: 4px
+      margin-right: 4px
+
+      &.slick-active button
+        height: 7px
+        background-color: #d81f26
+        line-height: 7px
+        position: relative
+
+        &:before, &:after
+          content: ""
+          border: 3.5px solid transparent
+          border-left: 4px solid #d81f26
+          display: inline-block
+          width: 0
+          height: 0
+          position: absolute
+          right: -7px
+          top: 0
+
+        &:before
+          left: -7px
+          right: unset
+          border: 3.5px solid transparent
+          border-right: 4px solid #d81f26
+
+      button
+        color: transparent
+        background-color: rgba(255, 255, 255, 0.25)
+        width: 50px
+        height: 2px
+        border: 0
+        line-height: 2px
+
+        &:focus
+          outline: 0
+
+
+@media (max-width: 1199px)
+  #gallery-n-documents
+    background-image: linear-gradient(to bottom, #287dc3 446px, #eaeaef 0)
+  //background-image: none
+
+  #gallery
+    padding-right: 0
+
+  #gallery-slider .image-container
+    max-height: 250px
+
+@media (max-width: 767px)
+  #gallery
+    display: none
+
+  #gallery-n-documents
+    background-image: none
+    background-color: #eaeaef

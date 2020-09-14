@@ -1,0 +1,42 @@
+{% set links_data = [
+  {
+    'image': {'src': '/dist/images/links/guvern.png','alt': 'Guvern'},
+    'title': 'Guvernul <br> Republicii',
+    'link': {'ref': 'https://gov.md','text': 'gov.md'}
+  },
+  {
+    'image': {'src': '/dist/images/links/guvern.png','alt': 'Guvern'},
+    'title': 'Ministerul Sănătății, <br> Muncii și Protecției',
+    'link': {'ref': 'https://msmps.gov.md','text': 'msmps.gov.md'}
+  },
+  {
+    'image': {'src': '/dist/images/links/inspectorat.png','alt': 'Inspectorat'},
+    'title': 'Inspectoratul <br> de Stat',
+    'link': {'ref': 'https://ism.gov.md','text': 'ism.gov.md'}
+  },
+  {
+    'image': {'src': '/dist/images/links/confederatia.png','alt': 'Confederatia'},
+    'title': 'Inspectoratul <br> de Stat',
+    'link': {'ref': 'https://cnpm.md','text': 'cnpm.md'}
+  },
+  {
+    'image': {'src': '/dist/images/links/sindicate.png','alt': 'Sindicate'},
+    'title': 'Confederaţia <br> Naţională',
+    'link': {'ref': 'https://sindicate.md','text': 'sindicate.md'}
+  }
+] %}
+
+<section id="links">
+  <div class="container">
+    <div class="title">
+      <h2>Linkuri utile</h2>
+    </div>
+    <div class="slick">
+      {% for link in links_data %}
+        <div>
+          {% include "link_slide.twig" with link %}
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>

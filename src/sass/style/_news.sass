@@ -1,0 +1,39 @@
+#news
+  .d-flex
+    margin-left: -15px
+    margin-right: -15px
+
+  .card
+    display: flex
+    flex-direction: column
+    flex: 25%
+    margin-left: 15px
+    margin-right: 15px
+    padding: 30px 22px
+    background: #fff url("/dist/images/news/red_arrow.svg") no-repeat right 20px top 30px
+
+    .title h5
+      color: #333
+      font-size: 1.8rem
+      font-weight: 900
+      line-height: 2.9rem
+
+    .image
+      margin-top: auto
+
+      img
+        width: 100%
+
+    .date
+      color: #aaaaaa
+      font-size: 1.2rem
+      font-weight: 700
+      letter-spacing: 0.89px
+
+@media screen and (max-width: 1199px)
+  #news
+    .card
+      flex: calc(100% / 3)
+
+      &:nth-child(4)
+        display: none

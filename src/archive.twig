@@ -1,0 +1,28 @@
+{% extends "templates/page.twig" %}
+{% block page %}
+  <section>
+    <div class="container">
+      {% include "templates/common/breadcrumb.twig" %}
+      {% include "templates/common/page_title.twig" with {
+        title: "Communicate de presă"
+      } %}
+      <div class="row">
+        <div class="col-sm-12 col-md-9">
+          {% include "templates/common/filter.twig" %}
+        </div>
+      </div>
+      <div class="row">
+        <main class="col-sm-8 col-md-9">
+          {% include "templates/archive/list-archive.twig" %}
+          {% include "templates/common/pagination.twig" %}
+        </main>
+        <aside class="col-sm-4 col-md-3">
+          {% include "templates/archive/nav-archive.twig" with {
+            title: "Comunicare"
+          } %}
+          <nav class="side-nav"></nav>
+        </aside>
+      </div>
+    </div>
+  </section>
+{% endblock %}

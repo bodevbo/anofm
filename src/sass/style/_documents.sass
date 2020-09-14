@@ -1,0 +1,76 @@
+#documents
+  background-color: transparent
+  padding-left: 4.8rem
+
+  .title
+    display: flex
+    align-items: center
+
+    h2
+      margin-right: auto
+      margin-top: 0.8rem
+      margin-left: 2.5rem
+
+    &:before
+      content: url("/dist/images/documents/bookmark.svg")
+      position: relative
+      top: -2.4rem
+
+    a
+      color: #287dc3
+      font-size: 1.4rem
+      font-weight: 900
+      letter-spacing: 0.84px
+      text-transform: uppercase
+      line-height: 0.5
+
+      &:after
+        content: url("/dist/images/link_arrow.svg")
+        margin-left: 1.5rem
+        vertical-align: text-top
+
+
+  .document
+    background-color: #fff
+    min-height: 250px
+    display: flex
+    flex-direction: column
+    padding: 2.5rem
+
+  .document__title
+    margin-top: auto
+    margin-bottom: 1.2rem
+
+  .document__type
+    font-size: 1rem
+    font-weight: 400
+    letter-spacing: 0.74px
+    text-transform: uppercase
+
+    .bordered
+      padding: 0.3rem 0.6rem
+      border-radius: 0.4rem
+      border: 1px solid rgba(0, 0, 0, 0.1)
+
+    &:before
+      content: url("/dist/images/documents/download.svg")
+      vertical-align: text-top
+      margin-right: 1rem
+
+  .document__date
+    color: #aaa
+    font-size: 12px
+    font-weight: 700
+    letter-spacing: 0.89px
+    text-transform: uppercase
+
+@media (max-width: 1199px)
+  #documents
+    padding-left: 0
+
+    .document__title h5
+      font-size: 15px
+
+@media (max-width: 991px)
+  #documents .document__title h5
+    font-size: 14px

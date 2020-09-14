@@ -1,0 +1,19 @@
+{% extends "templates/page.twig" %}
+{% block page %}
+  <main>
+    {% include "templates/main/main_slider.twig" %}
+    {% include "templates/main/banners.twig" %}
+    {% include "templates/main/news.twig" %}
+    <section id="gallery-n-documents">
+      <div class="container">
+        <div class="col-lg-6">
+          {% include "templates/main/gallery.twig" %}
+        </div>
+        <div class="col-lg-6">
+          {% include "templates/main/documents.twig" %}
+        </div>
+      </div>
+    </section>
+    {% include "templates/main/links.twig" %}
+  </main>
+{% endblock %}

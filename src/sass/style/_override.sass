@@ -1,0 +1,118 @@
+.container
+  min-width: 360px
+
+.navbar-inverse, footer
+  background-color: $blue
+
+.navbar-header
+  display: flex
+  align-items: center
+  justify-content: space-between
+
+  &:before, &:after
+    content: none
+
+.navbar-default
+  background-color: #fff
+  box-shadow: 0 37px 36px rgba(0, 0, 0, 0.15)
+
+.navbar-default .navbar-brand
+  color: $blue
+  font-size: 1.7rem
+  font-weight: 500
+  height: 70px
+  margin-left: 0 !important
+
+.navbar-default .navbar-home
+  background-image: url("../images/logo.svg")
+  color: #287dc3
+  font-size: 20px
+  font-weight: 500
+  line-height: 26px
+  display: flex
+  align-items: center
+
+.navbar-default .navbar-nav
+  &:before, &:after
+    content: none
+
+  > li
+    > a
+      font-size: 1.2rem
+      font-weight: 700
+      letter-spacing: 0.089rem
+      text-transform: uppercase
+      color: #287dc3
+      padding: 0 20px
+      border-right: 1px solid rgba(0, 0, 0, 0.1)
+
+    //margin-left    : 1.6rem;
+
+    &:last-child > a
+      border-right: 0
+
+    &.lang > a
+      color: $dark-gray
+
+hr
+  border-color: $white
+  opacity: 0.2
+  margin: 44px 0
+
+ul
+  list-style: none
+  padding-left: 0
+
+.d-flex
+  display: flex
+
+.justify-between
+  justify-content: space-between
+
+.align-center
+  align-items: center
+
+.breadcrumb
+  background-color: transparent
+
+  li a
+    color: #aaa
+
+    img
+      vertical-align: text-top
+
+.link
+  margin-top: 40px
+
+  a
+    display: block
+    margin: auto
+    max-width: 300px
+    width: 100%
+    border: 1px solid rgba(0, 0, 0, 0.1)
+    border-radius: .25rem
+    line-height: 55px
+    text-align: center
+    color: #333
+    font-size: 14px
+    font-weight: 900
+    letter-spacing: 0.84px
+
+@media (max-width: 1199px)
+  .navbar-default .navbar-home
+    margin-right: auto
+
+@media (max-width: 767px)
+  .text-xs-center
+    text-align: center
+
+  .menu-navbar
+    display: none
+
+  .navbar-default .navbar-brand:not(.navbar-home)
+    display: none
+
+@media (max-width: $layout-breakpoint-small)
+  .container
+    max-width: 100%
+    width: inherit 

@@ -1,0 +1,54 @@
+#links
+  .slick-list
+    width: 100%
+
+  .slick-slider
+    display: flex
+    align-items: center
+
+  .slick
+    background-color: #fff
+
+  .slide
+    display: flex
+    align-items: center
+    height: 135px
+    justify-content: center
+
+    .text
+      color: #333
+      font-size: 15px
+      line-height: calc(4 / 3)
+      font-weight: 500
+      margin-left: 1rem
+
+      p
+        margin-bottom: 0.25rem
+
+      a
+        color: #aaa
+        font-size: 12px
+        font-weight: 500
+        letter-spacing: 0.89px
+        text-transform: uppercase
+
+.slick-prev, .slick-next
+  margin: 0
+  padding: 0 1.8rem
+  background: none
+  border: 0
+  font-size: 0
+  line-height: 0
+
+  &:focus
+    outline: 0
+
+  &:before
+    content: url("/dist/images/arrow.svg")
+
+  &.slick-disabled
+    opacity: calc(1 / 3)
+    filter: grayscale(1)
+
+.slick-prev
+  transform: rotate(180deg)

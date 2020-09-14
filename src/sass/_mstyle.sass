@@ -1,0 +1,3081 @@
+/***************************************************************************
+ *	Aici vor fi toate stilurile modificate dupa designul template-ului,
+ *	pentru a crea un block pe o alta pagina sau template v-a fi deajuns
+ *	de facut copy/paste la codul HTML si respectiv codul CSS cu clasa la
+ *	blocul necesar.
+ *
+ *	!!! Atenție, unele clase CSS sunt doar pentru ghid și pentru
+ *	aranjamentul corect al modulelor și div-urilor corect în acest
+ *	ghid, deci ele nu sunt necesare de copiat în codul template-ului
+ *	pe care îl ve-ți crea.
+ *
+ *	Succese.
+ ****************************************************************************
+@import mstyle/mixins
+@import mstyle/checkbox
+@import mstyle/owl-carousel
+@import mstyle/select2
+@import mstyle/datepicker
+
+/*importing Roboto font
+@import url("https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&display=swap&subset=cyrillic,cyrillic-ext")
+
+/* body rules
+body
+  font-family: 'Roboto', sans-serif
+  font-weight: 400
+  line-height: 1.714em
+
+#page-content
+  min-height: 100vh
+
+  //padding-bottom : 90px;
+  padding-top: 165px
+  position: relative
+
+/* black small navbar
+.navbar-inverse
+  //background : rgb(40, 125, 195);
+  color: #fff
+  float: left
+  margin: 0
+  max-height: 30px
+  width: 100%
+
+.navbar-inverse .gov_logo
+  background-image: url(../images/gov-logo-white.png)
+  background-position: left
+  background-repeat: no-repeat
+  background-size: 16px
+  display: inline-block
+  font-weight: 400
+  line-height: 2.143em
+  margin: 0
+  padding-left: 25px
+
+.navbar-inverse .gov_logo:hover
+  text-decoration: underline
+
+.navbar-inverse a
+  color: #fff
+  transition: all .2s ease-in-out
+
+.navbar-inverse ul li
+  padding: 0
+
+.navbar-inverse ul a
+  display: block
+  line-height: 2.143em
+  padding: 0 15px
+
+.navbar-inverse ul a > i
+  margin-right: 5px
+
+.navbar-inverse ul a:hover
+  text-decoration: underline
+
+.navbar-inverse ul a:focus
+  background: #fff
+  color: #333
+
+/*page font change
+#fontChange,
+#fontChange2
+  cursor: pointer
+  display: inline-block
+  position: relative
+
+#page-content.fontChanged main
+  font-size: 16px
+
+#page-content.fontChanged .ghid-block
+  height: 288px
+
+#page-content.fontChanged .tab-content
+  height: 365px
+
+#page-content.fontChanged .category
+  height: 300px
+
+/*/.page font change
+.navbar-fixed-top
+  margin: 0
+  transition: all .2s ease-in-out
+
+.navbar-fixed-top.scrolled-down
+  margin-top: -30px
+
+/* Main Menu
+/*logo
+
+/*menu
+.main-navbar .navbar-brand
+  background: url("../images/stema.svg") no-repeat left
+  background-size: 55px
+  display: table
+  font-size: 14px
+  font-weight: bold
+  height: 90px
+  line-height: 1.286em
+  margin-right: 0
+  padding: 0 0 0 70px
+
+.main-navbar.demo-navbar .navbar-brand
+  background-image: url("http://placehold.it/110x110")
+  background-position: left
+  background-repeat: no-repeat
+
+.main-navbar .navbar-brand span
+  display: table-cell
+  vertical-align: middle
+
+.main-navbar .navbar-brand:hover
+  color: #333
+
+.main-navbar
+  clear: both
+  height: 110px
+  padding-top: 1rem
+
+.menu-navbar ul
+  display: flex
+  justify-content: space-between
+  margin-bottom: 0
+  margin-left: -1.5rem
+  margin-right: -1.5rem
+
+  li
+    color: #333
+    font-size: 14px
+    font-weight: 700
+    letter-spacing: 1.04px
+    text-transform: uppercase
+
+    &.active
+      background-color: #287dc3
+
+      a
+        color: #fff
+
+    a
+      padding: 1.5rem
+      display: inline-block
+      color: #333
+
+.navbar-nav
+  margin-right: 0
+  padding: 25px 0
+  display: flex
+  align-items: center
+
+/*top dropdown menu
+.dropdown.open
+  position: relative
+
+.dropdown.open:after
+  border-color: #eee
+  border-style: solid
+  border-width: 1px 1px 0 1px
+  bottom: -1px
+  content: ""
+  left: 0
+  position: absolute
+  top: 0
+  width: 100%
+  z-index: 1000
+
+.navbar-nav .dropdown .fa
+  color: #287dc3
+  margin-right: 5px
+  font-size: 15px
+
+.navbar-nav > li > .dropdown-menu
+  border-color: #eee
+  box-shadow: none
+
+//left         : 0;
+//min-width    : 190px;
+
+/*pentru ghid btn-download
+.btn-download
+  background: #36c
+  color: #fff !important
+  display: inline-block !important
+  margin-top: 5px
+  padding: 4px 15px !important
+
+.btn-download:hover,
+.btn-download:focus
+  background: #333 !important
+  text-decoration: none !important
+
+/* /.pentru ghid btn-download
+
+/* Footer
+footer
+  background: #718f9e
+  bottom: 0
+  color: #fff
+  padding: 1% 0 20px
+  width: 100%
+
+footer h5
+  color: #fff
+  font-weight: 400
+  line-height: 1.357em
+  margin: 0
+
+footer .contact-tel
+  color: #fff
+  font-size: 36px
+  line-height: 100%
+  margin-left: -15px
+
+footer .contact-tel:hover
+  text-decoration: none
+
+footer .contact-tel span
+  color: #ccc
+
+.copyright
+  color: #fff
+  font-size: 12px
+  line-height: 1.357em
+
+.copyright a
+  color: #fff
+  text-decoration: underline
+
+.copyright a:hover
+  text-decoration: none
+
+/*********************************************************
+ *		 ELEMENTELE FOLOSITE DOAR PENTRU GHID
+ **********************************************************
+
+/*buttons code preview
+.intro.buttons.full_width
+  border-bottom: 1px solid #ccc
+  display: inline-block
+  margin-bottom: 30px
+  width: 100%
+
+.intro.buttons.full_width h4
+  display: inline-block
+  margin-top: 10px
+
+#buttonsCode
+  margin-bottom: 30px
+
+.collapse h6, .collapse h5
+  margin-bottom: 15px
+
+/*********************************************************
+ *	SFIRSIT - ELEMENTELE FOLOSITE DOAR PENTRU GHID
+ **********************************************************
+
+/*********************************************************
+ *		 CREAREA PAGINILOR SI A ELEMENTELOR ACESTORA
+ **********************************************************
+
+/*** Paginile Ghidului **
+
+/*index.html
+
+.intro
+  margin-bottom: 25px
+
+.intro h2
+  margin-bottom: 15px
+  margin-top: 30px
+
+.intro hr
+  margin-top: 10px
+
+.intro hr.divider-top
+  border-color: #ccc
+  margin-top: 30px
+
+.divider.comunication
+  border-color: #ccc
+  margin-bottom: 30px
+  margin-top: 25px
+
+.intro .alert p
+  margin-bottom: 0
+
+.communications
+  margin-bottom: 25px
+
+.communications h4
+  margin-bottom: 10px
+  margin-top: 0
+
+.communications p
+  margin-bottom: 25px
+
+.communications i
+  color: #333
+
+.three-column
+  -moz-column-count: 3
+
+  /* Firefox
+  -webkit-column-count: 3
+
+  /* Chrome, Safari, Opera
+  column-count: 3
+  -moz-column-gap: 30px
+
+  /* Firefox
+  -webkit-column-gap: 30px
+
+  /* Chrome, Safari, Opera
+  column-gap: 30px
+
+.three-column .alert
+  margin: 0
+
+.ghid-block
+  border: 1px solid #ccc
+  height: 258px
+  margin-bottom: 30px
+  position: relative
+
+.ghid-title
+  border-bottom: 1px solid #ccc
+  height: 56px
+  line-height: 3em
+  padding-left: 30px
+
+.ghid-block p
+  margin: 0
+  padding: 25px 10px 25px 30px
+
+.ghid-block .btn
+  background: #fff
+  border: 1px solid #36c
+  border-radius: 3px
+  bottom: 30px
+  color: #36c
+  left: 30px
+  position: absolute
+  transition: all 0.2s ease-in-out
+  width: 145px
+
+.ghid-block .btn:hover
+  border-color: #333
+  color: #333
+
+/*grila.html
+.backgrounded
+  background-color: #ccc
+  height: 70px
+  margin-bottom: 30px
+  width: 100%
+
+.grid-view [class^='col-md'] div
+  border: 1px solid #ccc
+  height: 70px
+  margin-bottom: 30px
+  position: relative
+
+.row-width
+  color: #666
+  display: inline-block
+  left: 50%
+  position: absolute
+  top: 38%
+  transform: translate(-50%)
+
+.borderd.with-code code
+  color: #666
+  left: 30px
+  position: absolute
+  top: 50%
+  transform: translateY(-50%)
+
+.image-view
+  margin-bottom: 30px
+  position: relative
+
+.image-view code
+  color: #fff
+  left: 30px
+  position: absolute
+  top: 30px
+
+.table > thead > tr > th,
+.table > tbody > tr > td
+  border: none
+  color: #666
+  padding: 0
+
+.table > thead
+  border-bottom: 1px solid #ccc
+  border-top: 1px solid #ccc
+
+.table > tbody
+  border-bottom: 1px solid #ccc
+
+.table > thead > tr > th
+  line-height: 3.5em
+
+.table > thead > tr > th,
+.table > tbody > tr > th,
+.table > tfoot > tr > th,
+.table > thead > tr > td, .table > tbody > tr > td, .table > tfoot > tr > td
+  width: 300px
+
+.table.grid-table tbody tr td:first-child
+  padding-left: 30px
+
+.table > tbody > tr > td
+  line-height: 3.5em
+
+/* !!! această clasa o vom folosi si pe viitor pentru header-ul mare pe toata lungimea și
+ *înălțimea ecranului
+.big-bg
+  background-attachment: fixed
+  background-position: center
+  background-repeat: no-repeat
+  background-size: cover
+  height: calc(100vh - 210px)
+  position: relative
+  width: 100%
+
+.big-bg:before
+  background: rgba(21, 21, 21, 0.6)
+  content: ""
+  height: 100%
+  left: 0
+  position: absolute
+  width: 100%
+
+.big-bg .center-content
+  color: #fff !important
+  left: 0
+  position: absolute
+  top: 50%
+  transform: translateY(-50%)
+  width: 100%
+
+.big-bg .center-content h4
+  color: #fff !important
+  margin: 0 0 30px 0
+
+.big-bg .center-content p
+  line-height: 2.143em
+  margin-bottom: 25px
+
+.big-bg .center-content h1,
+.big-bg .center-content h5
+  color: #fff
+
+.big-bg .center-content .btn
+  border-color: transparent
+  margin: 0 13px
+
+.big-bg .center-content h1
+  margin-bottom: 20px
+
+/*end
+
+/*colors.html
+.intro.bordered
+  border-bottom: 1px solid #eee
+
+.three-column.top-description
+  border-bottom: 1px solid #ccc
+  margin-bottom: 30px
+  padding-bottom: 30px
+
+.three-column.top-description .alert
+  break-inside: avoid
+  -webkit-column-break-inside: avoid
+  page-break-inside: avoid
+
+.intro p
+  margin-bottom: 20px
+
+.color-bg
+  float: left
+  height: 70px
+  margin-right: 30px
+  width: 170px
+
+.color-name
+  margin: 5px 0
+
+.color-spect
+  float: left
+  width: 170px
+
+.color-spect span
+  color: #666
+
+.color
+  margin-bottom: 30px
+  position: relative
+
+.color b
+  color: #c7254e
+  font-family: "Courier New", monospace
+
+.monochrome-set,
+.primary-set
+  border-bottom: 1px solid #ccc
+  margin-bottom: 30px
+  margin-left: 0
+
+/* color
+/*pentru a obtine un div cu background-ul in culoarea dorită,
+ *doar adăugăm div-ului clasa necesară.
+.black
+  background-color: #333
+
+.dark-gray
+  background-color: #666
+
+.gray
+  background-color: #aaa
+
+.medium-gray
+  background-color: #ccc
+
+.white
+  background-color: #fff
+  border: 1px solid #ccc
+
+.medium-blue
+  background-color: #718f9e
+
+.light-blue
+  background-color: #9cf
+
+.light-red
+  background-color: #fcc
+
+.light-green
+  background-color: #dff0d8
+
+.light-yellow
+  background-color: #fcf8e3
+
+/* text.html
+.font-description h4
+  color: #333
+  margin-bottom: 15px
+
+.font-description p
+  break-inside: avoid
+  -webkit-column-break-inside: avoid
+  margin-bottom: 15px
+  page-break-inside: avoid
+
+.font-description .alert
+  break-inside: avoid
+  -webkit-column-break-inside: avoid
+  page-break-inside: avoid
+
+.font-description .alert p
+  margin-bottom: 0
+
+.font-description .btn
+  margin-bottom: 25px
+
+.bigLetter
+  color: #333
+  font-size: 72px
+  margin-top: 10px
+
+/*regular font
+.regular h1,
+.regular p,
+.regular span
+  font-weight: 400
+
+/*italic font
+.italic
+  font-style: italic
+  font-weight: 400
+
+.italic h1
+  font-weight: 400
+
+/*bold italic
+.bold-italic
+  font-style: italic
+  font-weight: bold
+
+/*bold font
+.bold
+  font-weight: 700
+
+/* titltes
+.titles h1,
+.titles h2,
+.titles h3,
+.titles h4,
+.titles h5,
+.titles h6
+  color: #333
+  margin: 0
+
+.titles h1,
+.titles h2,
+.titles h3
+  line-height: 2.143em
+
+.titles h4,
+.titles h5,
+.titles h6
+  line-height: 1.714em
+
+/*paragraph
+.paragraph
+  padding-bottom: 20px
+
+.paragraph h4
+  color: #333
+  margin: 0
+
+.paragraph .black
+  padding: 30px
+
+.paragraph .black p,
+.paragraph .black code
+  color: #ccc
+
+.paragraph p
+  float: left
+  line-height: 1.714em
+  margin: 0
+  max-width: 50%
+  padding-right: 35px
+
+/* lists
+.lists
+  padding-bottom: 5px
+
+.lists h4
+  color: #333
+  margin: 0
+
+.lists ul,
+.lists ol
+  float: left
+  line-height: 1.714em
+  margin: 0
+  max-width: 50%
+  padding-left: 15px
+  padding-right: 35px
+
+.lists ul li,
+.lists ol li
+  margin-bottom: 15px
+  padding-left: 10px
+
+/* hyperlinks
+.hyperlinks
+  padding-bottom: 20px
+
+.hyperlinks h4
+  color: #333
+  margin: 0
+
+.hyperlinks p
+  float: left
+  line-height: 1.714em
+  margin: 0
+  max-width: 50%
+  padding-right: 35px
+
+.hyperlinks p.default-state a
+  display: inline-block
+  margin-bottom: 25px
+
+.hyperlinks p.default-state span
+  color: #333
+  cursor: pointer
+  text-decoration: underline
+
+/* blockquote
+.blockquote
+  padding-bottom: 20px
+
+.blockquote h4
+  color: #333
+  line-height: 1.714em
+  margin: 0
+
+.blockquote blockquote
+  border: none
+  color: #333
+  float: left
+  font-size: 14px
+  font-weight: 400
+  line-height: 1.714em
+  margin: 0
+  max-width: 50%
+  padding: 0 35px 0 0
+
+.img-description
+  color: #ccc
+  font-style: italic
+
+/* code
+.code .description code
+  float: left !important
+  margin-bottom: 10px
+  margin-right: 40px
+  max-width: 50%
+
+/*vizualizare cod
+.titles-code li
+  border-bottom: 1px solid #ccc
+  display: inline-block
+  margin-bottom: 25px
+  padding-bottom: 25px
+  width: 100%
+
+.titles-code li:last-child
+  border: none
+  margin-bottom: 0
+  padding-bottom: 0
+
+.title-tag
+  float: left
+  width: 45%
+
+.titles-code code
+  width: 45%
+
+.paragraph code
+  text-align: left
+  width: 45%
+
+.lists code
+  text-align: left
+  width: 45%
+
+.hyperlinks code
+  text-align: left
+  width: 45%
+
+.blockquote code
+  text-align: left
+  width: 45%
+
+/* end vizualizare cod
+
+/* exemple
+.exemple-title,
+.article-title
+  color: #333
+  font-weight: 700
+  margin-top: 0
+
+.exemple-title
+  margin-bottom: 25px
+
+.article-author
+  color: #666
+
+.article-author a
+  color: #36c
+
+.article-author a:hover
+  color: #333
+
+.test-bg
+  background-image: url("../images/test_bg.jpg")
+  background-position: center
+  background-repeat: no-repeat
+  background-size: cover
+  height: 515px
+  margin-top: 15px
+  width: 100%
+
+.test-description
+  padding-top: 10px
+
+.test-description p
+  color: #666
+  line-height: 1.714em
+  margin-bottom: 20px
+
+.test-description p:first-of-type
+  padding-right: 20px
+
+.test-description blockquote
+  border: none
+  color: #333
+  font-size: 14px
+  line-height: 1.714em
+  padding: 0
+
+.test-description h3
+  color: #333
+  font-weight: 700
+  margin: 20px 0
+
+.test-description ul
+  line-height: 1.714em
+  padding-left: 15px
+
+.test-description ul li
+  padding-right: 100px
+
+/*exemplu text.html(aliniere text cu imagini)
+.test
+  margin-bottom: 30px
+
+.test.left figure
+  float: left
+  margin-bottom: 30px
+  margin-right: 30px
+  text-align: center
+
+.test.right figure
+  float: right
+  margin-bottom: 30px
+  margin-left: 30px
+  text-align: center
+
+.test.center figure
+  margin-bottom: 30px
+
+/* pictogramele (font Awesome)
+.description i
+  color: #333
+  display: inline-block
+  font-weight: 400
+
+.description p
+  color: #666
+  margin-bottom: 20px
+
+.top.description p
+  margin-bottom: 0
+
+.description.alert
+  margin-bottom: 30px
+
+.description.alert p
+  margin-bottom: 0
+
+.description h4
+  margin: 0 0 20px 0
+
+.block-title h4
+  margin: 0 0 25px 0
+
+.icons-block
+  padding-bottom: 30px
+
+.icons-block .text-muted.pull-right
+  display: none
+
+.icons-block .text-muted
+  float: right
+  margin-right: 15px
+
+.icons-block .col-md-4.col-sm-6
+  line-height: 30px
+
+.icons-page-main .highlight
+  margin-bottom: 30px
+
+.page-header
+  border-bottom: 1px solid #ccc
+
+.highlight pre
+  margin-bottom: 25px
+  margin-top: 10px
+
+/*alert box-urile
+.alert h4
+  line-height: 1.333em
+
+.top-alert-info
+  margin: 0
+  padding: 10px 0
+  position: fixed
+  top: 0
+  width: 100%
+  z-index: 99
+
+.top-alert-info p
+  display: inline-block
+
+.top-alert-info .close
+  color: #36c
+  font-size: 14px
+  margin-top: 5px
+  opacity: 1
+  text-shadow: none
+
+#animated
+  margin-bottom: 15px
+
+/*stema
+.stema-rm
+  margin-bottom: 30px
+
+.stema-rm .divider
+  border-color: #ccc
+  margin-top: 15px
+
+.stema-rm h4,
+.stema-rm p
+  margin-bottom: 20px
+
+/* nav.html (Navigare)
+
+/*text-links - legăturile text
+.text-link span
+  color: #666
+  display: inline-block
+  line-height: 24px
+  margin-bottom: 29px
+
+.text-link .hover
+  color: #333
+  text-decoration: underline
+
+.text-link.black
+  padding: 20px
+
+.text-link.black a
+  color: #fff
+  text-decoration: underline
+
+.text-link.black a:hover
+  text-decoration: none
+
+.text-link.black span
+  color: #ccc
+  margin-bottom: 15px
+
+/*** clase pentru ghid **
+.btn-exemples.white
+  border: none
+
+.btn-exemples h4
+  margin-bottom: 20px
+
+.btn-exemples.black
+  margin-top: -27px
+  padding: 30px 30px 0 30px
+
+.btn-exemples.black h4
+  color: #fff
+
+.black .btn,
+.white .btn
+  margin-bottom: 30px
+
+/*** /.clase pentru ghid **
+
+/*buttons
+.btn i.fa
+  margin: 0 5px
+
+.btn.disabled
+  background-color: #ccc
+  border-color: #ccc
+  color: #666
+  cursor: no-drop
+  pointer-events: none
+
+.btn.disabled i.fa
+  color: #666 !important
+
+.btn-default.hovered
+  border-color: #333
+  color: #333
+
+.btn-primary.hovered
+  background-color: #333
+  border-color: #333
+  color: #fff
+
+.btn-warning.hovered
+  background-color: #fff
+  border-color: #333
+  color: #333
+
+.btn-danger.hovered
+  background-color: #333
+  border-color: #333
+  color: #fff
+
+/* buttons on black-bg
+.btn-transparent
+  background: transparent
+  border-color: #fff
+  color: #fff
+
+.btn-transparent:hover
+  background-color: #fff
+  border-color: #36c
+  color: #36c
+
+.black-bg.btn-primary
+  background-color: #fff
+  border-color: #fff
+  color: #36c
+
+.black-bg.btn-primary:hover,
+.black-bg.btn-primary.hovered
+  background-color: #fff
+  border-color: #fff
+  color: #333
+
+.black-bg.btn-warning
+  background: transparent
+  border-color: #c33
+  color: #c33
+
+.black-bg.btn-warning:hover,
+.black-bg.btn-warning.hovered
+  background-color: #fff
+  border-color: #fff
+  color: #333
+
+.black-bg.btn-danger
+  background-color: #fff
+  border-color: #fff
+  color: #c33
+
+.black-bg.btn-danger:hover,
+.black-bg.btn-danger.hovered
+  background-color: #fff
+  border-color: #fff
+  color: #333
+
+.black-bg.btn-disabled,
+.black-bg.btn-disabled:hover,
+.black-bg.btn-disabled.hovered
+  background-color: transparent
+  border-color: #666
+  color: #666
+
+/*butoane pe toata lungimea blocului
+.buttons.thumbnail
+  padding: 30px 30px 0 30px
+
+.btn.fullWidth
+  width: 100%
+
+/*paginarea
+.pagination li
+  display: inline-block
+  padding: 0
+
+.pagination > li > a
+  border: none
+  color: #36c
+  font-weight: bold
+  line-height: 24px
+  margin: 0 5px
+  padding: 7px 0
+
+.pagination > .active > a,
+.pagination > .active > a:hover
+  background: transparent
+  color: #666
+
+.pagination > li > a:hover
+  background: transparent
+  border-color: #333
+  color: #333
+
+.pagination > li:last-child > a,
+.pagination > li a.prev
+  border: 1px solid #36c
+  border-radius: 4px
+  margin: 0
+  padding: 7px 20px
+  transition: all 0.2s ease-in-out
+
+.pagination > li:last-child > a i
+  margin-left: 5px
+
+.pagination > li a.prev i
+  margin-right: 5px
+
+.pagination > li:last-child > a:hover,
+.pagination > li a.prev:hover
+  background: #fff
+  border-color: #333
+  color: #333
+
+/* bredcrumb cu succes si eroare
+.breadcrumb.withCheck
+  margin-bottom: 30px
+
+.breadcrumb.withCheck li
+  margin-right: 35px
+  padding-left: 15px
+  position: relative
+  width: auto
+
+.breadcrumb.withCheck li:before
+  left: -25px
+  position: absolute
+
+.breadcrumb.withCheck li.checked,
+.breadcrumb.withCheck li.checked a
+  color: #3c763d
+
+.breadcrumb.withCheck li.unchecked,
+.breadcrumb.withCheck li.unchecked a
+  color: #c33 !important
+
+.breadcrumb.withCheck li.unchecked:after
+  content: "\f057"
+  display: inline-block
+  font: normal normal normal 14px/1 FontAwesome
+  font-size: inherit
+  -webkit-font-smoothing: antialiased
+  left: 0
+  -moz-osx-font-smoothing: grayscale
+  position: absolute
+  text-rendering: auto
+
+.breadcrumb.withCheck li.checked:after
+  content: "\f058"
+  display: inline-block
+  font: normal normal normal 14px/1 FontAwesome
+  font-size: inherit
+  -webkit-font-smoothing: antialiased
+  left: 0
+  -moz-osx-font-smoothing: grayscale
+  position: absolute
+  text-rendering: auto
+  top: 4px
+
+.breadcrumb.withCheck li:after
+  content: "\f10c"
+  display: inline-block
+  font: normal normal normal 14px/1 FontAwesome
+  font-size: inherit
+  -webkit-font-smoothing: antialiased
+  left: 0
+  -moz-osx-font-smoothing: grayscale
+  position: absolute
+  text-rendering: auto
+  top: 4px
+
+.breadcrumb.withCheck li,
+.breadcrumb.withCheck li a
+  color: #666
+
+.breadcrumb.withCheck li.active,
+.breadcrumb.withCheck li.active a
+  color: #333
+  font-weight: bold
+
+/*clase pentru ghid pentru afisarea exemplelor de footer
+.navbar-example
+  margin-bottom: 30px
+
+.footer-examples
+  margin-bottom: 30px
+  min-height: 120px
+  position: relative
+
+.footer-example2
+  height: 265px
+
+.intro.navs
+  margin-bottom: 0
+
+.intro.navs h4
+  margin-bottom: 10px
+
+.example.nav .example_bg
+  background-position: 50% 0
+  background-repeat: no-repeat
+  background-size: 100%
+  margin-bottom: 25px
+  transition: background-position .8s ease-in-out
+
+.example.nav:hover .example_bg
+  background-position: 50% 100%
+
+.example.nav.middle .example_bg
+  background-position: 50%
+
+.example.nav h4
+  margin-bottom: 25px
+
+/*/.clase pentru ghid
+
+/*pentru ca footerul(subsolul paginii) să fie permanent jos pe pagină,
+ *chiar și atunci cind pagina este formată doar din main menu și footer, folosim:
+ *#page-content co Poziție Relativa, min-height = 100vh(toată înălțimea ecranului)
+ *și padding-bottom atât cît are footer-ul pe înălâțime (exemplul nostru 90px), iar
+ *footer-ului ii atribuim proprietățile de mai jos :-)
+
+/*footer styling
+
+.copyright
+  color: #fff
+  font-size: 12px
+  line-height: 1.357em
+
+.copyright a
+  color: #fff
+  text-decoration: underline
+
+.copyright a:hover
+  text-decoration: none
+
+/*big footer
+.big-footer
+  height: 235px
+
+.footer-block h4
+  color: #fff
+
+.big-footer .call-action
+  color: #fff
+  display: block
+  font-size: 36px
+  font-weight: 700
+  margin-top: 20px
+
+.big-footer .call-action span
+  color: #ccc
+  font-weight: 300
+
+.footer-block ul
+  line-height: 2.143em
+  margin-top: 20px
+
+.footer-block li > a
+  color: #fff
+  text-decoration: underline
+
+.footer-block li > a:hover
+  text-decoration: none
+
+.footer-block li > a i.fa
+  margin-right: 10px
+
+.footer-block .copyright
+  color: #fff
+  font-size: 14px
+  line-height: 1.714em
+  margin-bottom: 18px
+
+.footer-block .btn-link
+  color: #fff
+  line-height: 2.143em
+  padding: 0
+  text-decoration: underline
+
+.footer-block .btn-link:hover
+  text-decoration: none
+
+/* forms.html
+
+/*info(i)
+.input-group-addon
+  background: transparent
+  border: none
+  color: #ccc
+  line-height: 2.143em
+  position: absolute
+  right: 0
+  top: 0px
+  width: auto
+  z-index: 5
+
+.input-group-addon.fixed
+  background: #fcfcf4
+  border: 1px solid #aaa
+  line-height: 1
+  position: static
+
+.input-group.required .control-label:after
+  color: #c33
+  content: "*"
+
+/*textarea
+.form-group textarea.fixedWidth
+  resize: vertical
+  width: 250px
+
+.form-group textarea.fixedHeight
+  height: 250px
+  max-height: 250px
+  min-height: 250px
+
+/*state-urile
+.focused-state .form-control,
+.form-control:focus
+  border-color: #333 !important
+  color: #333
+
+.completed-state .form-control
+  border-color: #ccc
+  color: #333
+
+.has-error .input-group-addon
+  background: transparent
+  color: #c33
+
+.has-error2 .form-control
+  background-color: #fcc
+
+p.error-message
+  color: #c33
+
+.has-success .input-group-addon
+  background: transparent
+  color: #3c763d
+
+.form-control[disabled],
+.form-control[readonly]
+  background-color: #eee
+
+.form-inline .form-control
+  width: calc(100% - 100px)
+
+.form-inline label
+  line-height: 2.857em
+  margin: 0
+
+/* mesage boxurile - majoritatea stilurilor
+ *sunt implicite din bootstrap
+.alert.light-red
+  color: #c33
+
+/*DEMO exemple pentru ghid
+/* test form
+.test-form
+  border: 1px solid #aaa
+  margin: 20px 0 30px
+  padding: 25px 30px
+
+.test-form .form-group
+  margin-bottom: 30px
+
+.test-form .checkbox
+  margin: 30px 0
+
+/* search box
+.main-search button.input-group-addon
+  background: #36c
+  border-bottom-right-radius: 4px
+  border-top-right-radius: 4px
+  color: #fff
+  height: 40px
+  line-height: 1
+  right: 0px
+  top: 0px
+  width: 40px
+
+.main-search .input-group-addon:hover
+  color: #333
+
+.main-search .input-group-addon:focus
+  outline: none
+
+/*dropdown
+.ui-autocomplete
+  background: #fff
+  color: #666
+  line-height: 2.143em
+  list-style-type: none
+  margin: 0
+  overflow: hidden
+  padding-left: 0
+  width: 370px
+
+.ui-autocomplete .ui-menu-item
+  border-color: #ccc
+  border-style: solid
+  border-width: 0 0 1px 0
+  cursor: pointer
+  padding: 5px 10px
+
+/*/.DEMO exemple pentru ghid
+
+/*tabele
+.responsive-table h4,
+.bordered-table h4,
+.striped-table h4,
+.standard-table h4,
+.pagination-table h4
+  margin: 15px 0
+
+.table
+  border: 1px solid #ccc
+
+.table tbody th
+  border-top: none !important
+
+.table > tbody > tr:first-child > td
+  padding-top: 0
+
+.table > thead:first-child > tr > th:first-child,
+.table > tbody > tr > th:first-child
+  line-height: 2.857em
+  padding-left: 30px
+  vertical-align: middle
+
+.table > tbody > tr > td
+  line-height: 2.857em
+  vertical-align: inherit
+
+.table > tbody > tr > td i.fa
+  margin-right: 5px
+
+.table-bordered > tbody > tr > td,
+.table-bordered > tbody > tr > th,
+.table-bordered > thead > tr > th
+  border-bottom: 1px solid #ccc
+  border-right: 1px solid #ccc
+  padding-left: 30px
+
+/*tabel cu scroll
+table.tableScrollable
+  display: table
+  width: 100%
+
+table.tableScrollable thead, table.tableScrollable tbody
+  float: left
+  width: 100%
+
+table.tableScrollable tbody
+  height: 250px
+  overflow: auto
+
+table.tableScrollable tr
+  display: table
+  text-align: left
+  width: 100%
+
+table.tableScrollable th, table.tableScrollable td
+  width: 33%
+
+/*tabel cu paginare
+.pagination-table
+  margin-bottom: 30px
+
+.panel-table .panel-body
+  padding: 0
+
+.panel-table .panel-body .table-bordered
+  border-style: none
+  margin: 0
+
+.panel-table .panel-body .table-bordered > thead > tr > th:first-of-type
+  text-align: center
+  width: 100px
+
+.panel-table .panel-body .table-bordered > thead > tr > th:last-of-type,
+.panel-table .panel-body .table-bordered > tbody > tr > td:last-of-type
+  border-right: 0px
+
+.panel-table .panel-body .table-bordered > thead > tr > th:first-of-type,
+.panel-table .panel-body .table-bordered > tbody > tr > td:first-of-type
+  border-left: 0px
+
+.panel-table .panel-body .table-bordered > tbody > tr:first-of-type > td
+  border-bottom: 0px
+
+.panel-table .panel-body .table-bordered > thead > tr:first-of-type > th
+  border-top: 0px
+
+.panel-table .panel-body .icons-td a
+  margin: 10px 15px
+  padding: 0 5px
+
+.panel-table .panel-footer .pagination
+  margin-bottom: 0
+  margin-top: -3px
+  text-align: right
+
+.panel-table .panel-footer .pagination a
+  background: transparent
+
+.panel-table .panel-footer .pagination a.next,
+.panel-table .panel-footer .pagination a.prev
+  padding: 5px 13px
+  text-align: center
+
+.panel-table .panel-footer .pagination > li a i
+  margin: 0 !important
+
+.panel-table .panel-footer .col
+  height: 34px
+  line-height: 2.143em
+
+.panel-table .panel-heading .col h3
+  height: 30px
+  line-height: 2.143em
+
+.panel-table .panel-body .table-bordered > tbody > tr > td
+  line-height: 2.143em
+
+.icons-td
+  text-align: center
+
+/*exemple de tabele in paginile create
+.example
+  border: 1px solid #ccc
+  margin-bottom: 20px
+  padding: 30px 30px 0 30px
+
+.example_bg
+  background-position: center top
+  background-size: cover
+  border: 1px solid #eee
+  height: 245px
+  margin-bottom: 15px
+  width: 100%
+
+.example .btn
+  margin-bottom: 15px
+
+/*/.exemple de tabele in paginile create
+
+/* performance.html
+/*clase pentru ghid
+.performance.description
+  margin-bottom: 30px
+
+.performance.description br
+  line-height: 2.3em
+
+.performance.description i
+  margin-bottom: 0
+
+.description.structure h4
+  margin-bottom: 10px
+
+.two-columns
+  -moz-column-count: 2
+  -o-column-count: 2
+  -webkit-column-count: 2
+  column-count: 2
+  column-gap: 30px
+
+pre
+  border-radius: 0
+
+.description.structure h4 code
+  color: #333
+  font-weight: bolder
+
+.description.structure h3
+  margin-bottom: 30px
+
+/*/.clase pentru ghid
+
+/* elements.html (elementele care le vom folosi la crearea paginilor noastre)
+.title-intro > h3,
+.title-intro > h4
+  margin: 20px 0
+
+/*big tabs
+.nav-tabs.big-tabs li
+  height: 90px
+  margin-right: 30px
+  width: 270px
+
+.nav-tabs li:last-child
+  margin-right: 0
+
+.nav-tabs.big-tabs > li > a
+  border: 1px solid #ccc
+  color: #999
+  margin: 0
+  max-height: 90px
+  padding: 30px
+
+.nav-tabs li i.fa
+  display: inline-block
+  float: left
+  font-size: 36px
+  margin-right: 20px
+
+.nav-tabs li b
+  font-size: 18px
+
+.nav-tabs li b,
+.nav-tabs li span
+  display: block
+  line-height: 18px
+
+.nav-tabs > li.active > a
+  border-bottom-color: transparent
+  color: #333
+
+.tab-content
+  border-bottom: 1px solid #ccc
+  border-left: 1px solid #ccc
+  border-right: 1px solid #ccc
+  margin-bottom: 30px
+  padding: 25px 30px 68px 30px
+  position: relative
+
+.tab-block.bordered
+  padding-bottom: 28px
+
+.tab-block
+  margin-bottom: 30px
+  position: relative
+
+.tab-block.bordered:before
+  background: #ccc
+  bottom: 0
+  content: ""
+  height: 1px
+  left: 15px
+  position: absolute
+  width: 30px
+
+.service
+  color: #36c
+  display: block
+  font-size: 18px
+  line-height: 1.714em
+
+.tab-pane a.btn
+  bottom: 30px
+  left: 30px
+  position: absolute
+  right: 30px
+  width: auto
+
+/*taburi normale/medii
+.nav-tabs-small li
+  height: auto
+  margin-right: 20px
+  width: auto
+
+.nav-tabs.nav-tabs-small li a
+  border: 1px solid #ccc
+  color: #999
+  margin: 0
+  padding: 15px 30px
+
+.nav-tabs.nav-tabs-small > li.active > a
+  border-bottom-color: transparent
+  color: #333
+
+/*afisarea serviciilor(blocuri)
+.service-block
+  border: 1px solid #ccc
+  color: #666
+  height: 250px
+  margin-bottom: 30px
+  overflow: hidden
+  padding: 25px 30px 28px 30px
+  position: relative
+  text-align: center
+  transition: border-color .2s ease-in-out
+  width: 100%
+
+.service-block .service-bg
+  background-position: center top
+  background-repeat: no-repeat
+  background-size: contain
+  display: block
+  height: 70px
+  width: 100%
+
+.service-block h5
+  line-height: 1.714em
+  margin-bottom: 0
+  margin-top: 17px
+  overflow: hidden
+  text-overflow: ellipsis
+  white-space: nowrap
+
+.service-block span
+  display: block
+  overflow: hidden
+  text-overflow: ellipsis
+  white-space: nowrap
+
+.service-block .btn
+  margin-top: 20px
+  width: 100%
+
+.service-block:hover
+  border-color: #333
+
+/*afisarea img cu overlay(masca)
+.overlay-img
+  display: inline-block
+  position: relative
+
+.overlay-img:after
+  background: rgba(51, 51, 51, 0.6)
+  content: ""
+  height: 100%
+  left: 0
+  position: absolute
+  top: 0
+  width: 100%
+
+/* datepickers
+input.date
+  max-width: 100%
+
+.input-group.date .form-control
+  background: #fcf8e3
+
+.datepicker table tr td.today, .datepicker table tr td.today:hover,
+.datepicker table tr td.today.disabled,
+.datepicker table tr td.today.disabled:hover
+  background: transparent !important
+  box-shadow: 0 0 0 1px #36c
+  color: #36c !important
+
+.datepicker-inline
+  margin: 0 auto
+
+.input-daterange.input-group .form-control
+  background: #fcf8e3
+  border-radius: 0
+  float: none
+  float: none
+  height: 40px
+  min-width: 200px
+  width: auto
+
+.input-daterange.input-group .input-group-addon
+  display: inline-block
+  position: relative
+
+/*video clase adaugatore doar pentru ghid
+.embed-responsive-16by9
+  margin-bottom: 30px
+
+/*hărți - stilurile implicite de la google maps sau
+ *pluginul snazzy maps (https://snazzymaps.com/)
+
+#map
+  margin-bottom: 30px
+
+.google_map
+  width: 100%
+
+/*carousel exemple
+.life-case
+  background: #fff
+  border: 1px solid #ccc
+  height: 250px
+  position: relative
+  width: 270px
+
+.life-case .case-bg
+  background-position: center
+  background-repeat: no-repeat
+  background-size: cover
+  border-bottom: 1px solid #ccc
+  height: 149px
+  width: 100%
+
+.life-case a
+  display: block
+  font-size: 18px
+  font-weight: bold
+  margin: 25px 0 5px 30px
+
+.life-case span
+  display: block
+  padding-left: 30px
+
+.life-carousel .owl-controls
+  padding-top: 30px
+  text-align: center
+  width: 100%
+
+.life-carousel .owl-dot
+  border: 2px solid #aaa
+  border-radius: 50%
+  display: inline-block
+  height: 13px
+  margin: 0 5px
+  transition: all .2s ease-in-out
+  width: 13px
+
+.life-carousel .owl-dot.active
+  background: #333
+  border-color: #333
+
+/*module categorii
+.category
+  background-position: center
+  background-repeat: no-repeat
+  background-size: cover
+  color: #fff
+  height: 270px
+  overflow: hidden
+  padding: 30px
+  position: relative
+  width: 100%
+
+.category a.overlay-lnk
+  background: rgba(51, 51, 51, 0.6)
+  height: 100%
+  left: 0
+  position: absolute
+  top: 0
+  transition: background .2s ease-out
+  width: 100%
+
+.category-title
+  color: #fff
+  margin-bottom: 6px
+  margin-top: 34%
+  position: relative
+
+.category .subtitle
+  position: relative
+
+.category .btn
+  background: transparent
+  border-color: #fff
+  bottom: 30px
+  color: #fff
+  font-weight: 400
+  left: 50%
+  position: absolute
+  transform: translateX(-50%)
+
+.category:hover a.overlay-lnk
+  background: rgba(51, 51, 51, 0.8)
+
+/*scenarii de viata blocks
+.block
+  margin-bottom: 50px
+
+.block .img-circle
+  display: inline-block
+  height: 70px
+  object-fit: cover
+  width: 70px
+
+.block .block-title
+  display: block
+  font-size: 18px
+  font-weight: bold
+  margin-bottom: 3px
+  margin-top: 13px
+
+/*categorisire servicii
+.service-category
+  height: 220px
+  margin-bottom: 60px
+  padding-left: 100px
+  position: relative
+
+.service-category .img-circle
+  height: 70px
+  left: 0
+  object-fit: cover
+  object-position: center
+  position: absolute
+  top: 0
+  width: 70px
+
+.service-category h4
+  margin-bottom: 5px
+
+.service-category span
+  display: block
+  margin-bottom: 15px
+
+.service-category ul
+  margin-bottom: 25px
+
+/*module
+.top-services,
+.last-services
+  border: 1px solid #ccc
+  height: 300px
+  margin-bottom: 30px
+
+.top-services h3,
+.last-services h3
+  border-bottom: 1px solid #ccc
+  line-height: 100%
+  margin: 0
+  padding: 17px 28px
+
+.top-services i.fa
+  margin-right: 5px
+
+.top-services ul,
+.last-services ul
+  padding: 25px 10px 0 28px
+  width: 100%
+
+.top-services ul a,
+.last-services ul a
+  color: #36c
+  display: block
+  line-height: 24px
+  margin-bottom: 18px
+
+.top-services ul a:hover,
+.last-services ul a:hover
+  color: #333
+
+.title
+  margin-bottom: 20px
+
+/*exemplu module logare
+.authentification-list
+  margin: 0
+
+.authentification-list li
+  padding: 0 15px
+
+.authentification-block
+  border: 1px solid #ccc
+  height: 346px
+  margin-bottom: 30px
+  overflow: hidden
+  padding: 28px 20px
+  position: relative
+  transition: border-color 0.2s ease-in-out
+  width: 100%
+
+.authentification-block:hover
+  border-color: #333
+
+.authentification-block h4
+  line-height: 24px
+
+.authentification-block img
+  height: 100px
+  margin: 0 auto 28px
+  opacity: .8
+
+.authentification-block h4
+  line-height: 24px
+  margin-bottom: 0
+
+.authentification-block.mob_sign
+  padding: 15px 30px 30px
+
+.authentification-block.mob_sign img
+  height: initial
+  margin-bottom: 0
+
+.authentification-block a
+  bottom: 30px
+  left: 30px
+  position: absolute
+  right: 30px
+  transition: all 0.2s ease-in-out
+
+.mob_sign .input-group
+  margin-bottom: 20px
+  margin-top: 15px
+  position: relative
+  width: 100%
+
+.mob_sign .input-group-addon
+  background: transparent
+  color: #999
+  height: 100%
+  left: 0
+  line-height: 2.143em
+  position: absolute
+  top: 0
+  transition: border-color .15s ease-in-out
+  width: 45px
+  z-index: 5
+
+.mob_sign .input-group .form-control
+  border: 1px solid #ccc
+  color: #333
+  margin: 0
+  padding-left: 50px
+  padding-right: 8px
+
+.input-group.succes-state .input-group-addon
+  border-color: #3c763d
+  z-index: 5
+
+/*elemente comprimabile(collapse)
+#services-subcategory
+  display: inline-block
+  height: auto
+  width: 100%
+
+.panel-group .panel
+  border: none
+  border-radius: 0
+  float: left
+  margin-top: 0 !important
+  padding: 0
+  width: 100%
+
+.panel-subcategory .panel-heading
+  border-radius: 0
+  border-top: 1px solid #ccc
+  padding: 20px 0
+
+.panel-subcategory .description-title
+  border: none
+  display: inline-block
+  line-height: 1.714em
+  padding: 0
+
+.panel-subcategory .panel-heading button
+  background: transparent
+  border: 1px solid #36c
+  border-radius: 4px
+  height: 30px
+  padding: 2px 11px
+  position: relative
+  text-align: center
+  width: 30px
+
+.panel-subcategory .panel-body
+  border-bottom: none
+  border-left: none
+  border-right: none
+  border-top: 1px solid #ccc !important
+
+.panel-subcategory .panel-body ol,
+.panel-subcategory .panel-body ul
+  margin-top: 15px
+
+.panel-collapse .panel-body li
+  margin-bottom: 15px
+
+.panel-subcategory .panel-heading button:hover,
+.panel-subcategory .panel-heading button:focus
+  border-color: #333
+  color: #333
+  outline: none
+  text-decoration: none
+
+/*blocuri contul meu
+.account-blk
+  background: #fff
+  border: 1px solid #ccc
+  border-radius: 0
+  height: 240px
+  margin-bottom: 30px
+  padding: 25px 30px
+  position: relative
+  width: 100%
+
+.account-blk > i.fa
+  color: #718f9e
+  display: block
+  font-size: 48px
+  line-height: 40px
+  margin-bottom: 13px
+
+.account-blk .title
+  display: inline-block
+  font-weight: bold
+  margin-bottom: 10px
+  transition: all .2s ease-in-out
+
+.badge
+  background: #c33
+  border-radius: 4px
+  display: none
+  margin-left: 5px
+  padding: 4px 7px
+
+.account-blk .subtitle
+  display: block
+  margin-bottom: 20px
+
+.account-blk .btn
+  bottom: 30px
+  left: 50%
+  position: absolute
+  transform: translateX(-50%)
+
+/*error page description (doar pentru ghid)
+.error-page-desc
+  margin-bottom: 30px
+
+.error-page-desc .page-title
+  margin-bottom: 25px
+  margin-top: 0
+
+.error-page-desc .btn
+  margin-top: 30px
+
+.page-example-view.no-scroll .view-bg
+  background-position: center top
+  background-size: cover
+  height: 350px
+
+/*** terms.html **
+
+/*terms menu
+.main-content aside
+  position: relative
+
+.terms-menu
+  border: 1px solid #ccc
+  max-height: 70vh
+  max-width: 260px
+  overflow-y: auto
+  padding: 18px 0 25px 0
+  position: fixed
+  top: 150px
+  width: 100%
+
+.terms-menu h3
+  border-bottom: 1px solid #ccc
+  line-height: 100%
+  margin-bottom: 0
+  margin-top: 0
+  padding-bottom: 16px
+  padding-left: 28px
+
+.terms-menu ol
+  line-height: 20px
+  margin-bottom: 0
+  margin-top: 25px
+  padding-right: 30px
+
+.terms-menu ol li
+  margin-bottom: 5px
+
+/*terms wrapp
+.terms-wrapp h1
+  margin: 26px 0
+
+.terms-wrapp .description h3
+  margin-bottom: 20px
+
+.terms-wrapp .description ul
+  color: #ccc
+  padding-left: 15px
+
+/*** news.html (stilurile pentru pagina de articole noutăți) **
+.page-title
+  margin-top: 25px
+
+.page-title .breadcrumb
+  border-bottom: 1px solid #ccc
+  margin-bottom: 27px
+  padding-bottom: 20px
+
+.news-intro
+  border-bottom: 1px solid #ccc
+  margin-bottom: 30px
+  padding-bottom: 30px
+
+.news-title
+  border-bottom: 1px solid #eee
+  margin-bottom: 25px
+  padding-bottom: 25px
+
+.news-intro.img-post .news-title
+  border: none
+  margin: 0
+
+.news-title h3
+  color: #36c
+  margin-bottom: 15px
+
+.news-title .news-post-date
+  display: block
+
+.news-intro p,
+.news-intro img
+  margin-bottom: 25px
+
+/*paginarea
+.main-description .pagination
+  margin-bottom: 25px
+  position: relative
+
+.main-description .pagination li.pull-right
+  right: 0
+
+/*sidebar
+.sidebar
+  margin-top: 30px
+
+.sidebar .block
+  border: 1px solid #ccc
+  clear: both
+  margin-bottom: 30px
+  position: relative
+
+.sidebar .block-title
+  border-bottom: 1px solid #ccc
+  margin: 0
+  padding: 20px 30px
+
+.sidebar .block-content
+  padding: 0
+
+.sidebar .block ul
+  margin: 0
+  padding: 25px 30px 15px 30px
+
+.block li
+  margin-bottom: 17px
+
+.block-content span.pull-right
+  color: #999
+
+/*** article.html **
+.main-description.article-content
+  border: none
+  padding: 0
+
+.article-title
+  border-bottom: 1px solid #eee
+  margin-bottom: 27px
+  padding-bottom: 23px
+
+.article-title h1
+  margin-bottom: 18px
+
+.article-title .post-date
+  color: #666
+
+.article-content h3
+  line-height: 1.5em
+  margin-bottom: 15px
+
+.article-content h4
+  margin-bottom: 20px
+
+.article-content p,
+.article-content ol,
+.article-content ul
+  margin-bottom: 25px
+
+.article-content blockquote
+  background: #eee
+  border-left: none
+  font-size: 14px
+  font-style: italic
+  margin-bottom: 30px
+  padding: 25px 30px
+
+.article-img
+  border-bottom: 1px solid #eee
+  margin-bottom: 30px
+  padding-bottom: 4px
+
+.article-img .img-responsive
+  margin-bottom: 5px
+  max-height: 515px
+
+.article-content ol
+  padding-left: 15px
+
+.article-content ol li:first-child
+  line-height: 1
+  margin-bottom: 5px
+
+/*commnents
+.article-comment
+  border-top: 1px solid #ccc
+  margin-top: 30px
+  padding-bottom: 25px
+  padding-top: 30px
+
+.article-comment .user-avatar
+  height: 70px
+  margin-right: 30px
+  object-fit: cover
+  width: 70px
+
+.article-comment .user-name
+  margin-bottom: 20px
+
+/*sidebar
+.block-content span.pull-right
+  color: #999
+
+.block li > ol
+  padding-left: 15px
+
+.block li > ol li
+  margin-bottom: 0
+
+/*** page_500.html, page_404.html, page_403.html (paginile cu erori) **
+.error_description
+  padding-top: 30px
+
+.separator
+  background-color: #eee
+  height: 1px
+  margin: 28px auto
+  width: 100%
+
+.error_description h3
+  margin-bottom: 12px
+
+/*** examples.html (pagina cu descrierea template-lor efectuate) **
+.page-example
+  padding: 30px 0
+  position: relative
+
+.page-example:before
+  background: #ccc
+  bottom: 0
+  content: ""
+  height: 1px
+  left: 15px
+  position: absolute
+  right: 15px
+  width: calc(100% - 30px)
+
+.page-example:last-of-type:before
+  display: none
+
+.examples-info
+  margin: 0
+  padding: 20px 30px
+
+.examples-info h4
+  line-height: 1.667em
+  margin-bottom: 20px
+
+.examples-info p
+  color: #666
+  line-height: 2.143em
+  margin-bottom: 15px
+
+.examples-info p:last-child
+  margin-bottom: 0
+
+.page-example .page-title
+  line-height: 1.250em
+  margin-bottom: 15px
+  margin-top: 0
+
+.page-example .page-title span
+  text-transform: lowercase
+
+.page-example ol.two-columns
+  column-gap: 50px
+  columns: 250px
+  padding-left: 15px
+
+.page-example ol.two-columns li
+  line-height: 2.143em
+
+.page-example-view
+  border: 1px solid #ccc
+  padding: 30px
+
+.page-example-view.sm .view-bg
+  height: 220px
+
+.page-example-view.sm:hover .view-bg
+  background-position: 50% 0%
+
+.view-bg
+  background-position: 50% 0%
+  background-repeat: no-repeat
+  background-size: 100%
+  border: 1px solid #eee
+  height: 245px
+  transition: background-position .6s ease-in-out
+  width: 100%
+
+.page-example-view:hover .view-bg
+  background-position: 50% 100%
+
+.page-example-view.no-scroll:hover .view-bg
+  background-position: 50% 0%
+
+/*******************************************************************
+ *			stilurile p/u dispozitivele mobile
+ ********************************************************************
+
+/*Phones
+
+/* Portrait
+@media only screen and (min-width: 320px) and (max-width: 767px) and (orientation: portrait)
+  #page-content
+    overflow-x: hidden
+
+  /*main menu button
+  .navbar-default .navbar-toggle:hover,
+  .navbar-default .navbar-toggle:focus
+    background-color: transparent
+
+  .navbar-default .navbar-toggle
+    border: none
+    overflow: hidden
+    transform: rotate(-90deg)
+    transition: all .1s ease-in-out
+
+  .navbar-toggle .icon-bar
+    position: relative
+    width: 30px
+
+  .navbar-toggle .icon-bar + .icon-bar
+    margin-top: 6px
+
+  .navbar-toggle span:nth-of-type(3)
+    margin-left: -60px
+    transition: 0.1s margin-left 0.2s ease-in-out
+
+  .navbar-toggle span:nth-of-type(2)
+    top: 8px
+    transform: rotate(45deg)
+    transition: transform .2s linear
+
+  .navbar-toggle span:nth-of-type(4)
+    bottom: 8px
+    transform: rotate(-45deg)
+    transition: transform .2s linear
+
+  .navbar-default .navbar-toggle.collapsed
+    transform: rotate(0)
+
+  .navbar-toggle.collapsed span:nth-of-type(3)
+    margin-left: 0
+
+  .navbar-toggle.collapsed span:nth-of-type(2)
+    top: auto
+    transform: rotate(0)
+
+  .navbar-toggle.collapsed span:nth-of-type(4)
+    bottom: auto
+    transform: rotate(0)
+
+  .main-navbar .navbar-brand
+    background-position: 15px center
+    background-size: 60px
+    padding: 0 0 0 85px
+
+  //width               : calc(100% - 50px);
+
+  .navbar-nav
+    margin: 0
+    padding: 15px 0
+
+  /* header
+  .navbar-fixed-top.scrolled-down
+    margin-top: -30px
+
+  .navbar-inverse .col-md-3.col-sm-6
+    text-align: center
+
+  .navbar-inverse ul
+    padding-right: 15px
+    text-align: center
+    width: 100%
+
+  .navbar-inverse ul li
+    float: none
+
+  .navbar-inverse h5
+    color: #fff
+    display: block
+    margin-left: 0
+    text-align: center
+
+  .navbar-toggle
+    margin: 23px 0
+
+  .btn-download
+    margin-left: 15px
+
+  .font_control #fontChange2
+    color: #36c
+    line-height: 20px
+    padding: 9px 15px
+    width: 100%
+
+  .navbar-inverse li:last-child .navbar-button
+    margin-top: 0
+
+  /* footer
+  //footer
+  //  height: 190px
+
+  footer .contact-tel
+    margin-left: 0
+
+  /* content
+  #page-content
+    overflow-x: hidden
+    //padding-bottom: 190px
+
+  .row-width
+    left: 0
+    text-align: center
+    top: 50%
+    transform: translateY(-50%)
+    width: 100%
+
+  .grid-view [class^='col-md'] div
+    height: 95px
+
+  /*three column text
+  .three-column
+    -moz-column-count: 1
+    -webkit-column-count: 1
+    column-count: 1
+
+  /*text.html
+  .font-description
+    margin-top: 30px
+
+  .title-tag
+    width: 35%
+
+  .titles-code code
+    width: 65%
+
+  .paragraph .black
+    display: inline-block
+
+  /*buttons
+  .buttons.black
+    padding: 30px 0 0 1px
+
+  /*pagination
+  .pagination
+    padding: 0
+
+  .pagination > li a.prev
+    margin-right: 5px
+
+  .pagination > li:last-child > a
+    margin-left: 5px
+
+  .pagination > li:last-child > a, .pagination > li a.prev
+    height: 36px
+    line-height: 36px
+    overflow: hidden
+    padding: 0
+    width: 36px
+
+  .pagination > li:last-child > a span, .pagination > li a.prev span
+    display: none
+
+  .pagination > li:last-child > a i.fa, .pagination > li a.prev i.fa
+    margin: 0
+
+  /*bredcrumbs
+  .breadcrumb.withCheck li:before
+    display: none
+
+  /*blocks
+  .services-list
+    text-align: center
+
+  .services-list li
+    float: none
+    height: 100%
+    margin: 0 10px 30px 10px
+
+  /* inputs
+  .form-control
+    max-width: 100%
+
+  .forms-page-main h5
+    margin-top: 30px
+
+  .terms-menu
+    margin-top: 30px
+    position: static
+
+  /*module
+  .top-services, .last-services
+    height: 100%
+    margin-bottom: 30px
+
+  .authentification-list li
+    width: 100%
+
+  /*tab content
+  .tab-content
+    height: 100%
+    padding: 25px 30px 60px 30px
+
+  .tab-pane a.btn
+    overflow: hidden
+    text-overflow: ellipsis
+    white-space: nowrap
+
+  .nav-tabs-small li
+    display: block
+    width: 100%
+
+  /*date picker
+  .input-group.date,
+  #calendar-datepicker
+    margin-bottom: 30px
+
+  .input-daterange.input-group .form-control,
+  .input-daterange.input-group .input-group-addon
+    display: block
+    margin: 0 auto
+
+  /*categorii
+  .category
+    margin-bottom: 30px
+
+  .service-category
+    height: inherit
+
+  .panel-subcategory .description-title
+    line-height: inherit
+    max-width: 85%
+
+  /*footer
+  .footer-example2
+    height: inherit
+
+  .big-footer
+    height: inherit
+    position: relative
+
+  .footer-block
+    margin-bottom: 20px
+
+  .footer-block ul
+    margin-top: 15px
+
+  /*** news.html **
+  .page-title
+    margin-top: 0
+
+  /*** exemple.html **
+  .page-example
+    padding: 30px 0 20px
+
+  .page-example-view
+    margin-bottom: 30px
+
+  .page-example ol.two-columns
+    -moz-column-count: 1
+    -o-column-count: 1
+    -webkit-column-count: 1
+    column-count: 1
+    margin-bottom: 0
+
+  /*clase pentru ghid
+  .ghid-blk,
+  .btn-exemples.black
+    margin-bottom: 30px
+
+/* Landscape
+@media only screen and (min-width: 320px) and (max-width: 767px) and (orientation: landscape)
+  /*main menu button
+  .navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus
+    background-color: transparent
+
+  .navbar-default .navbar-toggle
+    border: none
+    overflow: hidden
+    transform: rotate(-90deg)
+    transition: all .1s ease-in-out
+
+  .navbar-toggle .icon-bar
+    position: relative
+    width: 30px
+
+  .navbar-toggle .icon-bar + .icon-bar
+    margin-top: 6px
+
+  .navbar-toggle span:nth-of-type(3)
+    margin-left: -60px
+    transition: 0.1s margin-left 0.2s ease-in-out
+
+  .navbar-toggle span:nth-of-type(2)
+    top: 8px
+    transform: rotate(45deg)
+    transition: transform .2s linear
+
+  .navbar-toggle span:nth-of-type(4)
+    bottom: 8px
+    transform: rotate(-45deg)
+    transition: transform .2s linear
+
+  .navbar-default .navbar-toggle.collapsed
+    transform: rotate(0)
+
+  .navbar-toggle.collapsed span:nth-of-type(3)
+    margin-left: 0
+
+  .navbar-toggle.collapsed span:nth-of-type(2)
+    top: auto
+    transform: rotate(0)
+
+  .navbar-toggle.collapsed span:nth-of-type(4)
+    bottom: auto
+    transform: rotate(0)
+
+  .navbar-nav
+    margin: 0
+    max-height: 200px
+    overflow: auto
+    padding: 15px 0
+
+  .btn-download
+    margin-left: 15px
+
+  .font_control #fontChange2
+    color: #36c
+    line-height: 20px
+    padding: 9px 15px
+    width: 100%
+
+  /* header
+  .navbar-inverse ul
+    padding-left: 0
+    padding-right: 15px
+    text-align: center
+    width: 100%
+
+  .navbar-inverse ul li
+    float: none
+
+  .navbar-inverse h5
+    display: block
+    margin-left: 0
+    text-align: center
+
+  .navbar-inverse .gov_logo
+    background-position: 32%
+    display: block
+    text-align: center
+
+  .navbar-toggle
+    margin: 23px 5px
+
+  .navbar-inverse li:last-child .navbar-button
+    margin-top: 0
+
+  .main-navbar
+    margin: 0
+
+  .main-navbar .navbar-brand
+    background-position: 15px center
+    padding: 0 0 0 85px
+
+  /* footer
+  footer
+    height: 180px
+
+  footer .contact-tel
+    margin-left: 0
+
+  /* content
+  #page-content
+    padding-bottom: 180px
+
+  .row-width
+    left: 0
+    text-align: center
+    top: 50%
+    transform: translateY(-50%)
+    width: 100%
+
+  /*three columns text
+  .three-column
+    -moz-column-count: 2
+    -webkit-column-count: 2
+    column-count: 2
+
+  /*text.html
+  .font-description
+    margin-top: 30px
+
+  .title-tag
+    width: 35%
+
+  .titles-code code
+    width: 65%
+
+  .paragraph .black
+    display: inline-block
+
+  /* inputs
+  .form-control
+    max-width: 100%
+
+  .forms-page-main h5
+    margin-top: 30px
+
+  /*blocks
+  .services-list
+    text-align: center
+
+  .services-list li
+    float: none
+    height: 100%
+    margin: 0 15px 30px 15px
+
+  /*tab content
+  .tab-content
+    height: 100%
+    padding: 25px 30px 60px 30px
+
+  .tab-pane a.btn
+    overflow: hidden
+    text-overflow: ellipsis
+    white-space: nowrap
+
+  .nav-tabs-small li
+    margin-right: 10px
+
+  .nav-tabs.nav-tabs-small li a
+    padding: 15px
+
+  /*date picker
+  .input-group.date,
+  #calendar-datepicker
+    margin-bottom: 30px
+
+  /*terms menu
+  .terms-menu
+    margin-top: 30px
+    position: static
+
+  /*categorii
+  .category
+    margin-bottom: 30px
+
+  .category-title
+    margin-top: 20%
+
+  .service-category
+    height: inherit
+
+  .panel-subcategory .description-title
+    line-height: inherit
+    max-width: 85%
+
+  /*footer
+  .footer-example2
+    height: inherit
+
+  .big-footer
+    height: inherit
+    position: relative
+
+  .footer-block
+    margin-bottom: 20px
+
+  .footer-block ul
+    margin-top: 15px
+
+  /*** exemple.html **
+  .page-example-view
+    margin-bottom: 30px
+
+  .page-example ol.two-columns
+    margin-bottom: 0
+
+  /*clase pentru ghid
+  .ghid-blk,
+  .btn-exemples.black
+    margin-bottom: 30px
+
+/* Tablets
+
+/* Portrait
+@media only screen and (min-width: 768px) and (max-width: 1280px) and (orientation: portrait)
+  /*header
+  .main-navbar .navbar-brand
+    background-size: 55px
+
+  //padding-left    : 70px;
+  //width           : 250px;
+
+  //.navbar-default .navbar-collapse
+  //  display: table !important
+  //  height: 90px !important
+
+  //width   : calc(100% - 250px);
+
+  .navbar-nav
+    display: table-cell
+    margin: 0
+    padding: 5px 0
+    text-align: right
+    vertical-align: middle
+
+  .navbar-nav li
+    display: inline-block
+    float: none
+
+  .btn-download
+    display: block !important
+    margin-top: 0
+
+  /* content
+  .ghid-block
+    height: 330px
+
+  /* inputs
+  .form-control
+    max-width: 100%
+
+  /*select dropdown stilizat
+  .select2-container
+    min-width: 213px
+    width: 213px
+
+  /*text
+  .paragraph .black_bg
+    display: inline-block
+
+  /*blocks
+  .services-list
+    text-align: center
+
+  .services-list li
+    float: none
+    height: 100%
+    margin: 0 15px 30px
+
+  .services-list li:last-child
+    margin-right: 15px
+
+  .top-services h3,
+  .last-services h3
+    font-size: 23px
+    padding: 17px 15px
+
+  .top-services ul, .last-services ul
+    padding: 25px 10px 0 15px
+
+  .top-services, .last-services
+    margin-bottom: 30px
+
+  .authentification-block
+    margin: 15px 0
+
+  /*tab content
+  .tab-content
+    height: 100%
+    padding: 25px 30px 60px 30px
+
+  .tab-pane a.btn
+    overflow: hidden
+    text-overflow: ellipsis
+    white-space: nowrap
+
+  .nav-tabs.big-tabs li
+    margin-right: 10px
+    width: 170px
+
+  .nav-tabs li i.fa
+    display: none
+
+  .nav-tabs-small li
+    margin-right: 10px
+
+  .nav-tabs.nav-tabs-small li a
+    padding: 15px
+
+  .terms-menu
+    margin-top: 90px
+    width: 200px
+
+  .big-footer .call-action
+    font-size: 28px
+
+  /*carousel
+  .life-case
+    width: 100%
+
+  /*** exemple.html **
+  .page-example-view
+    margin: 0 auto 30px
+    max-width: 345px
+
+/* Landscape
+@media only screen and (min-width: 768px) and (max-width: 1280px) and (orientation: landscape)
+  /*header
+  .main-navbar .navbar-brand
+    background-size: 55px
+    padding-left: 70px
+
+  .navbar-default .navbar-collapse
+    display: table !important
+    height: 90px !important
+
+  .navbar-nav
+    display: table-cell
+    float: none !important
+    padding: 0
+    text-align: right
+    vertical-align: middle
+
+  .navbar-nav > li
+    display: inline-block
+    float: none
+
+  .btn-download
+    display: block !important
+    margin-top: 0
+
+  /*forms
+  .form-inline .form-control
+    width: calc(100% - 100px)
+
+  /*select dropdown stilizat
+  .select2-container
+    min-width: 213px
+    width: 213px
+
+  /*blocks
+  .services-list
+    text-align: center
+
+  .services-list li
+    height: 100%
+    margin: 0 15px 25px
+
+  .services-list li:last-child
+    margin-right: 15px
+
+  .top-services h3, .last-services h3
+    padding: 17px 7px
+
+  /*tab content
+  .nav-tabs.big-tabs li
+    width: 21%
+
+  .nav-tabs.big-tabs li a
+    padding: 30px 15px
+
+  .tab-content
+    height: 430px
+
+  /* faq.html
+  .terms-menu
+    left: 30px
+    width: 220px
+
+@media (max-width: 991px)
+  .menu-navbar ul li a
+    font-size: 1.2rem
+    padding: 1.5rem 1rem
+
+@media (max-width: 767px)
+  #page-content
+    padding-top: 110px

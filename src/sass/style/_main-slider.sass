@@ -1,0 +1,154 @@
+#main-slider
+  padding: 0
+
+  .slide
+    position: relative
+
+  .overlay
+    position: absolute
+    top: 0
+    left: 0
+    background-image: linear-gradient(270deg, rgba(0, 51, 168, 0.33) 0%, #287dc3 66%)
+    width: 100%
+    height: 100%
+
+  .image-container img
+    display: block
+    margin-left: auto
+
+  .slide .container
+    position: relative
+
+  .overlay__container
+    color: #fff
+    width: 50%
+    padding-right: 6rem
+    position: absolute
+    -ms-transform: translateY(16%)
+    transform: translateY(16%)
+
+    h1
+      font-size: 4rem
+      font-weight: 300
+      line-height: 53px
+
+    p
+      font-size: 1.6rem
+      line-height: 26px
+
+    time
+      font-size: 1.2rem
+      font-weight: 700
+      letter-spacing: 0.89px
+      text-transform: uppercase
+
+      &:before
+        content: url("/dist/images/main_slider/calendar.svg")
+        margin-right: 0.8rem
+        vertical-align: sub
+
+    a
+      color: #fff
+      font-size: 14px
+      font-weight: 900
+      letter-spacing: 0.84px
+      text-transform: uppercase
+      background-color: #3eb549
+      line-height: 45px
+      display: inline-block
+      border-radius: 45px
+      padding-left: 29px
+      width: 235px
+      position: relative
+      margin-top: 1rem
+
+      &:after
+        content: ""
+        border: 5px solid transparent
+        border-left: 5px solid #fff
+        display: block
+        width: 0
+        height: 0
+        position: absolute
+        right: 1.5rem
+        top: 0
+        bottom: 0
+        margin: auto
+
+  .slick-dots
+    position: absolute
+    bottom: 80px
+    left: calc((100vw - 1170px) / 2 + 270px)
+    display: flex !important
+    margin-bottom: 0
+
+    li
+      margin-left: 4px
+      margin-right: 4px
+
+      &.slick-active button
+        height: 7px
+        background-color: #fff
+        line-height: 7px
+        position: relative
+
+        &:before, &:after
+          content: ""
+          border: 3.5px solid transparent
+          border-left: 4px solid #fff
+          display: inline-block
+          width: 0
+          height: 0
+          position: absolute
+          right: -7px
+          top: 0
+
+        &:before
+          left: -7px
+          right: unset
+          border: 3.5px solid transparent
+          border-right: 4px solid #fff
+
+      button
+        color: transparent
+        background-color: rgba(255, 255, 255, 0.25)
+        width: 50px
+        height: 2px
+        border: 0
+        line-height: 2px
+
+        &:focus
+          outline: 0
+
+
+@media (max-width: 1199px)
+  #main-slider
+    .overlay__container
+      padding-right: 0
+
+    .slick-dots
+      left: calc((100vw - 1170px) / 2 + 380px)
+
+@media (max-width: 991px)
+  #main-slider
+    .overlay__container
+      width: 75%
+
+    .slick-dots
+      left: calc((100vw - 1170px) / 2 + 490px)
+
+@media (max-width: 767px)
+  #main-slider
+    .overlay__container
+      width: 100%
+      left: 0
+      padding-left: 1.5rem
+
+      a
+        width: 150px
+
+    .slick-dots
+      left: 0
+      bottom: 2.5rem
+      right: 0
+      justify-content: center

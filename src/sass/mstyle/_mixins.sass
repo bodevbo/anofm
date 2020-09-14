@@ -1,0 +1,19 @@
+=datepicker-table-disabled($gradient-from, $gradient-to, $bgc-active)
+  &, &.disabled
+    &, &:hover
+      background-image: -moz-linear-gradient(to bottom, $gradient-from, $gradient-to)
+      background-image: -ms-linear-gradient(to bottom, $gradient-from, $gradient-to)
+      background-image: -webkit-gradient(linear, 0 0, 0 100%, from($gradient-from), to($gradient-to))
+      background-image: -webkit-linear-gradient(to bottom, $gradient-from, $gradient-to)
+      background-image: -o-linear-gradient(to bottom, $gradient-from, $gradient-to)
+      background-image: linear-gradient(to bottom, $gradient-from, $gradient-to)
+      background-repeat: repeat-x
+      border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25)
+      color: #000
+      filter: progid:DXImageTransform.Microsoft.gradient(enabled=false)
+
+      &, &:hover.disabled, &[disabled], &:hover[disabled]
+        background-color: $gradient-to
+
+    &:active, &:hover:active, &.active, &:hover.active
+      background-color: $bgc-active
