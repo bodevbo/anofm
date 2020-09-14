@@ -1,20 +1,26 @@
 {% extends "templates/page.twig" %}
 {% block page %}
-  <section>
-    <div class="container">
-      <div class="row">
-        <main class="col-sm-9">
-          {% include "templates/common/breadcrumb.twig" %}
-          {% include "templates/common/page_title.twig" with {
-            title: "Ziua Internaționala a Tineretului – rezultatele campaniei"
-          } %}
-          {% include "templates/new/content.twig" %}
-        </main>
-        <aside class="col-sm-3">
 
-          <nav class="side-nav"></nav>
+<main class="entry">
+    <div class="container">
+        {% include "templates/common/breadcrumb.twig" %}
+        {% include "templates/common/page_title.twig" with {
+          title: "Ziua Internaționala a Tineretului – rezultatele campaniei"
+        } %}
+      <div class="row">
+        <article class="col-sm-8 col-md-9">
+          {% include "templates/new/content.twig" %}
+        </article>
+        <aside class="col-sm-4 col-md-3">
+           {% include "templates/archive/nav-archive.twig" with {
+              title: "Comunicare"
+            } %}
+            {% include "templates/common/slider-aside.twig" with {
+              title: "Ultimele noutăţi"
+            } %}
         </aside>
       </div>
     </div>
-  </section>
+  </main>
+
 {% endblock %}

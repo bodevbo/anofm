@@ -224,3 +224,14 @@ $('#main-slider').slick({
     dots: true,
     arrows: false
 })
+
+if ($('#a-slider')[0]){
+    $('#a-slider').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        dots: true,
+        arrows: false,
+        autoplay: true,
+        autoplaySpeed: 5000
+    })
+}
