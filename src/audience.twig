@@ -1,0 +1,21 @@
+{% extends "templates/page.twig" %}
+{% block page %}
+  <main class="entry">
+    <div class="container">
+      {% include "templates/common/breadcrumb.twig" %}
+      {% include "templates/common/page_title.twig" with {
+        title: "Audiența cetățenilor"
+      } %}
+      <div class="row">
+        <article class="col-sm-8 col-md-9">
+          {% include "templates/contact/contact-audience.twig" %}
+        </article>
+        <aside class="col-sm-4 col-md-3">
+          {% include "templates/contact/nav-contact.twig" with {
+            title: "Contacte"
+          } %}
+        </aside>
+      </div>
+    </div>
+  </main>
+{% endblock %}
