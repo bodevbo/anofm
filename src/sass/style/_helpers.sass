@@ -242,6 +242,9 @@
   h3
     font-weight: $roboto-light
 
+.font-light
+  font-weight: $roboto-light
+
 .text-dark
   color: $dark-gray
 
@@ -250,6 +253,9 @@
 
 .fz-1
   font-size: $fz1
+
+.fz-1-5
+  font-size: $fz1-5
 
 .p-aside
   padding: 30px 22px
@@ -287,6 +293,27 @@
     box-shadow: none
     border: none
 
+.title-sm
+  font-weight: $roboto-black
+
+.flex-wrap
+    -ms-flex-wrap: wrap !important
+    flex-wrap: wrap !important
+
+.justify-center
+  -webkit-box-pack: center !important
+    -ms-flex-pack: center !important
+    justify-content: center !important
+
+.d-block
+  display: block !important
+
+.sup
+  font-size: 1.2rem
+
+.text-alert
+  color: $textalert
+
 @media (min-width: $layout-breakpoint-small)
   .hidden-md
     display: none
@@ -301,3 +328,9 @@
 
   .content img[style="float: right"]
     float: none !important
+
+  .flex-sm-column
+    -webkit-box-orient: vertical !important
+    -webkit-box-direction: normal !important
+    -ms-flex-direction: column !important
+    flex-direction: column !important
