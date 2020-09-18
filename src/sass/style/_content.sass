@@ -1,0 +1,41 @@
+.content
+	line-height: 2.9rem
+
+	ol
+		@include auto-numbers(li, " ", item, ol);
+		list-style: none
+		li
+			&:before
+				color: $white
+				background: $blue
+				height: 22px
+				width: 22px
+				text-align: center
+				display: inline-block
+				border-radius: 50%
+				font-size: $fz1
+				line-height: 2.5rem
+				margin-right: 1.5rem
+				font-weight: bold
+	ol,ul
+		margin-top: 25px
+		margin-bottom: 25px
+		li
+			margin-bottom: 10px
+
+	ul
+		margin-left: 4.7rem
+		li
+			&:before
+				content: ''
+				display: inline-block
+				background: $blue
+				height: 7px
+				width: 7px
+				border-radius: 50%
+				margin-right: 2.2rem
+
+	h4,h3
+		font-size: 2.2rem
+		margin-top: 25px
+		margin-bottom: 25px
