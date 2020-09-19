@@ -39,6 +39,21 @@
 .m-5
   margin: 1.25em !important
 
+.mt-1
+  margin-top: .25rem !important
+
+.mt-2
+  margin-top: .50rem !important
+
+.mt-3
+  margin-top: .75rem !important
+
+.mt-4
+  margin-top: 1rem !important
+
+.mt-5
+  margin-top: 1.25rem !important
+
 .mb-1
   margin-bottom: .25rem !important
 
@@ -263,6 +278,9 @@
 .fz-1-8
   font-size: $fz1-8
 
+.fz-2-2
+  font-size: $fz2-2
+
 .p-aside
   padding: 30px 22px
 
@@ -345,6 +363,9 @@
 .mb-25
   margin-bottom: 25px
 
+.mb-40
+  margin-bottom: 40px
+
 .text-green
   color: $green
 
@@ -358,6 +379,13 @@
   font-size: 2.2rem
   border-bottom: 1px solid $blue
 
+.no-decor
+  text-decoration: none !important
+
+.hr
+  height: 1px
+  background-color: $dark-light
+
 @media (min-width: $layout-breakpoint-small)
   .hidden-md
     display: none
@@ -370,6 +398,12 @@
   .hidden-xs
     display: none 
 
+  .text-sm-center
+    text-align: center
+    &>img
+      margin-left: auto
+      margin-right: auto
+
   .content img[style="float: right"]
     float: none !important
 
@@ -381,3 +415,6 @@
 
   .no-bd-sm
     border: none !important
+
+  .mb-sm-5
+    margin-bottom: 1.5rem
