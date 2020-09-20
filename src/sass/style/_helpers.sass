@@ -275,6 +275,9 @@
 .fz-1-4
   font-size: $fz1-4
 
+.fz-1-6
+  font-size: $fz1-6
+
 .fz-1-8
   font-size: $fz1-8
 
@@ -386,6 +389,53 @@
   height: 1px
   background-color: $dark-light
 
+.content
+  &.tabular
+    table
+      width: 100%
+      font-size: $fz1-6
+      thead
+        border-bottom: 1px solid $blue
+        font-size: $fz1-4
+      th,td
+        padding: 10px
+        &:first-child
+          padding-left: 0
+        &:last-child
+          padding-right: 0
+
+.panel-group 
+  & .panel-default
+      float: none
+      background: transparent 
+      border: 1px solid $dark-light
+      border-radius: 4px
+      box-shadow: none
+      .panel-heading
+        background: transparent 
+        border: none
+        .panel-title
+          a
+            position: relative
+            padding-right: 25px
+            &:before
+              background: url('../images/icons/arrow-down.svg')
+              background-repeat: no-repeat
+              content: ''
+              height: 15px
+              width: 15px
+              position: absolute
+              right: 0
+              top: 0
+              transition: .3s all
+              @include rotate(180deg);
+            &.collapsed:before
+              top: 5px
+              @include rotate(0deg);
+
+      .panel-body
+        border: none !important
+
 @media (min-width: $layout-breakpoint-small)
   .hidden-md
     display: none
@@ -418,3 +468,10 @@
 
   .mb-sm-5
     margin-bottom: 1.5rem
+
+  .content
+    &.tabular
+      .table-wrap
+        overflow-y: hidden 
+        td,th
+          min-width: 120px

@@ -1,0 +1,23 @@
+{% extends "templates/page.twig" %}
+{% block page %}
+  <main class="entry">
+    <div class="container">
+      {% include "templates/common/breadcrumb.twig" %}
+      {% include "templates/common/page_title.twig" with {
+        title: "Direcţiile ANOFM"
+      } %}
+      <div class="row">
+        <article class="col-sm-8 col-md-9">
+          
+            {% include "templates/about/directions-list.twig" %}
+          
+        </article>
+        <aside class="col-sm-4 col-md-3">
+          {% include "templates/about/nav-about.twig" with {
+            title: "ANOFM"
+          } %}
+        </aside>
+      </div>
+    </div>
+  </main>
+{% endblock %}

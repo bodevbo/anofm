@@ -37,3 +37,10 @@
       &:before
         counter-increment: #{$counter}
         content: if($nested-parent, counters(#{$counter}, "#{$sep} ") "#{$sep} ", counter(#{$counter}) "#{$sep} ")
+
+@mixin rotate($degrees)
+    -webkit-transform: rotate($degrees)
+    -moz-transform: rotate($degrees)
+    -ms-transform: rotate($degrees)
+    -o-transform: rotate($degrees)
+    transform: rotate($degrees) 
