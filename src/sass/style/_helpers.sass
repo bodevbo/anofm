@@ -403,12 +403,38 @@
       thead
         border-bottom: 1px solid $blue
         font-size: $fz1-4
+        td,th
+          font-weight: bold
       th,td
         padding: 10px
         &:first-child
           padding-left: 0
         &:last-child
           padding-right: 0
+        em,i
+          color: $dark-medium
+      th
+        color: $blue
+        line-height: 2.7rem
+        font-weight: normal
+  &.tabular-va-head-bottom
+    table
+      thead
+        th,td
+          vertical-align: bottom
+          line-height: 1.9rem !important 
+          min-width: 100px 
+  &.tabular-head-fz-1-4
+    table
+      thead
+        th,td
+        font-size: $fz1-4
+        color: $blue
+        text-transform: uppercase
+  &.tabular-va-body-top
+    tbody
+      th,td
+       vertical-align: top
 
 .panel-group 
   & .panel-default
