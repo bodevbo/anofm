@@ -84,6 +84,43 @@
         &:focus
           outline: 0
 
+.gallery-wrap
+  a
+    display: block
+    &:hover,
+    &:focus
+      color: $white
+      text-decoration: none
+  .description
+    position: absolute
+    bottom: 0
+    width: 100%
+    max-width: 370px 
+    padding: 25px 45px 25px 25px
+    z-index: 3
+    .date
+      opacity: 50%
+      display: block
+  .pic
+    position: relative
+  .pic:before
+    position: absolute
+    content: ''
+    height: 55%
+    width: 100%
+    bottom: 0
+    left: 0
+    z-index: 1
+  .pic:after
+    background: url('../images/icons/window.svg') 0 0 no-repeat
+    background-size: contain
+    position: absolute
+    content: ''
+    height: 23px
+    width: 23px
+    bottom: 26px
+    right: 21px
+    z-index: 2
 
 @media (max-width: 1199px)
   #gallery-n-documents
