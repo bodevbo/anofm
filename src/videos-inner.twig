@@ -1,0 +1,21 @@
+{% extends "templates/page.twig" %}
+{% block page %}
+  <main class="entry">
+    <div class="container">
+      {% include "templates/common/breadcrumb.twig" %}
+      {% include "templates/common/page_title.twig" with {
+        title: "Târgul locurilor de muncă pentru Tineret 2019. Începe cariera ta aici!"
+      } %}
+      <div class="row">
+        <article class="col-sm-8 col-md-9">
+           {% include "templates/gallery/videos-inner.twig" %}
+        </article>
+        <aside class="col-sm-4 col-md-3">
+          {% include "templates/archive/nav-archive.twig" with {
+            title: "Comunicare"
+          } %}
+        </aside>
+      </div>
+    </div>
+  </main>
+{% endblock %}
