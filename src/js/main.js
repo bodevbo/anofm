@@ -209,10 +209,17 @@ $('#banners__slider').slick({
     arrows: true,
     responsive: [
         {
+            breakpoint: 1164,
+            settings: {
+                slidesToShow: 5,
+                slidesToScroll: 1
+            }
+        },
+        {
             breakpoint: 992,
             settings: {
                 slidesToShow: 4,
-                slidesToScroll: 4
+                slidesToScroll: 2
             }
         }
     ]
