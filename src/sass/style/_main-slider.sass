@@ -138,14 +138,31 @@
       left: calc((100vw - 1170px) / 2 + 490px)
 
 @media (max-width: 767px)
-  #main-slider
+  #main-slider  
     .overlay__container
       width: 100%
       left: 0
       padding-left: 1.5rem
+      position: relative
+      -ms-transform: translateY(6%)
+      transform: translateY(6%)
 
       a
         width: 150px
+
+    .overlay
+      position: relative
+      padding-bottom: 10rem
+
+    .image-container
+      position: absolute
+      text-align: right
+      height: 100%
+      img
+        object-fit: cover
+        display: block
+        height: 100%
+        max-width: 100%
 
     .slick-dots
       left: 0

@@ -28,7 +28,7 @@
         Ultimele noutăţi
       </h2>
     </div>
-    <div class="d-flex">
+    <div class="d-flex ov-sm-scroll-x">
       {% for news_item in news_data %}
         {% include "news_card.twig" with news_item %}
       {% endfor %}

@@ -193,6 +193,15 @@ $('#links .slick').slick({
                 slidesToScroll: 3
             }
         }
+        ,
+        {
+            breakpoint: 768,
+            settings: {
+                slidesToShow: 2,
+                slidesToScroll: 1,
+                arrows: false
+            }
+        }
     ]
 })
 
@@ -201,7 +210,12 @@ $('#gallery-slider').slick({
     arrows: false,
     centerMode: true,
     dots: true,
-    variableWidth: true
+    variableWidth: true,
+    responsive: [
+        {
+            adaptiveHeight: true
+        }
+    ]
 })
 
 $('#banners__slider').slick({

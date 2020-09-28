@@ -74,3 +74,20 @@
 @media (max-width: 991px)
   #documents .document__title h5
     font-size: 14px
+
+@media (max-width: $layout-breakpoint-xsmall)
+    #documents
+      position: relative
+      padding-top: 1.4rem
+      .col-xs-4
+        min-width: 190px
+      .title
+        padding-left: 56px
+        align-items: flex-start
+        margin-bottom: 3rem
+        &:before
+          position: absolute
+          top: 0
+          left: 0
+        h2
+          margin: 0 0 1rem

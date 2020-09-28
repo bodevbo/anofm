@@ -496,6 +496,13 @@
     display: none 
 
 @media (max-width: $layout-breakpoint-xsmall)
+
+  .d-ms-flex
+    display: flex
+
+  .ov-sm-scroll-x
+    overflow-x: scroll
+
   .hidden-xs
     display: none 
 
@@ -526,3 +533,8 @@
         overflow-y: hidden 
         td,th
           min-width: 120px
+
+  .justify-sm-content-center 
+    -webkit-box-pack: center !important
+    -ms-flex-pack: center !important
+    justify-content: center !important

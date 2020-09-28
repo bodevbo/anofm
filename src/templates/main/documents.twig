@@ -17,13 +17,13 @@
 ] %}
 
 <section id="documents">
-  <div class="title">
+  <div class="title flex-sm-column">
     <h2>
       Documente
     </h2>
     <a href="#">VEZI TOATE</a>
   </div>
-  <div class="row">
+  <div class="row d-ms-flex ov-sm-scroll-x">
     {% for item in items %}
       {% include "document.twig" with item %}
     {% endfor %}
