@@ -150,6 +150,11 @@ body
     font-weight: 700
     letter-spacing: 1.04px
     text-transform: uppercase
+    position: relative
+
+    &:hover >
+      ul
+        display: block
 
     &.active
       background-color: #287dc3
@@ -157,10 +162,71 @@ body
       a
         color: #fff
 
+      ul
+        li
+          a
+            color: #333
+
     a
       padding: 1.5rem
       display: inline-block
       color: #333
+
+    ul
+      background-color: #fff
+      position: absolute
+      top: 100%
+      display: block
+      box-shadow: 0 20px 10px rgba(0,0,0, .16)
+      margin: 0
+      border-radius: 0 0 3px 3px
+      width: 257px
+      display: none
+      padding-top: 7px
+      padding-bottom: 7px
+
+      li
+        a
+          font-size: 1.5rem
+          font-weight: normal
+          text-transform: none
+          display: block
+          padding: 1rem 2rem
+          position: relative
+          z-index: 2
+          &:hover
+            text-decoration: none
+        &:hover
+          background-color: rgb(247,247,249)
+          color: #333
+        &:last-child a
+          border-radius: 0 0 3px 3px
+
+        &.has-submenu:before
+          background-image: url("../images/icons/arrow-gray-r.svg")
+          background-repeat: no-repeat
+          background-size: contain
+          content: ''
+          position: absolute
+          right: 19px
+          top: 14px
+          width: 6.5px
+          height: 13px
+          z-index: 1
+
+        &.active
+          background-color: rgb(247,247,249)
+          a
+            color: #333
+
+
+      ul
+        left: 100%
+        top: -7px
+        border-radius: 3px
+
+        li:first-child a
+          border-radius: 3px 3px 0 0
 
 .navbar-nav
   margin-right: 0
@@ -2433,16 +2499,19 @@ input.date
   .navbar-toggle .icon-bar + .icon-bar
     margin-top: 6px
 
-  .navbar-toggle span:nth-of-type(3)
+  .navbar-toggle span:nth-of-type(3),
+  .navbar-toggle.collapsed.on span:nth-of-type(3)
     margin-left: -60px
     transition: 0.1s margin-left 0.2s ease-in-out
 
-  .navbar-toggle span:nth-of-type(2)
+  .navbar-toggle span:nth-of-type(2),
+  .navbar-toggle.collapsed.on span:nth-of-type(2)
     top: 10px
     transform: rotate(45deg)
     transition: transform .2s linear
 
-  .navbar-toggle span:nth-of-type(4)
+  .navbar-toggle span:nth-of-type(4),
+  .navbar-toggle.collapsed.on span:nth-of-type(4)
     bottom: 8px
     transform: rotate(-45deg)
     transition: transform .2s linear
@@ -2699,16 +2768,19 @@ input.date
   .navbar-toggle .icon-bar + .icon-bar
     margin-top: 6px
 
-  .navbar-toggle span:nth-of-type(3)
+  .navbar-toggle span:nth-of-type(3),
+  .navbar-toggle.collapsed.on span:nth-of-type(3)
     margin-left: -60px
     transition: 0.1s margin-left 0.2s ease-in-out
 
-  .navbar-toggle span:nth-of-type(2)
+  .navbar-toggle span:nth-of-type(2),
+  .navbar-toggle.collapsed.on span:nth-of-type(2)
     top: 8px
     transform: rotate(45deg)
     transition: transform .2s linear
 
-  .navbar-toggle span:nth-of-type(4)
+  .navbar-toggle span:nth-of-type(4),
+  .navbar-toggle.collapsed.on span:nth-of-type(4)
     bottom: 8px
     transform: rotate(-45deg)
     transition: transform .2s linear

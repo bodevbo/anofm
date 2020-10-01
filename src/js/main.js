@@ -256,3 +256,7 @@ if ($('#a-slider')[0]){
         autoplaySpeed: 5000
     })
 }
+
+$('.btn-mobile').click(function(){
+    $(this).toggleClass('on')    
+});
