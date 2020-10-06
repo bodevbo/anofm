@@ -3088,9 +3088,7 @@ input.date
     padding-left: 70px
 
   .navbar-default .navbar-collapse
-    display: table !important
-    height: 90px !important
-
+    
   .navbar-nav
     display: table-cell
     float: none !important
@@ -3143,6 +3141,19 @@ input.date
   .terms-menu
     left: 30px
     width: 220px
+
+.lang a
+  position: relative
+  padding-right: 34px !important
+  &:before
+    background: url('../images/icons/arrow-down-gray.svg') no-repeat;
+    content: ''
+    position: absolute
+    top: 50%
+    right: 15px
+    transform: translate(0,-50%)
+    height: 4px
+    width: 7px
 
 @media (max-width: 991px)
   .menu-navbar ul li a

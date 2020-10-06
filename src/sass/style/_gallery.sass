@@ -152,6 +152,48 @@
   max-width: inherit 
   object-fit: contain
 
+.image-container
+  position: relative
+  .pic
+    position: absolute
+    height: 100%
+    width: 100%
+    left: 0
+    top: 0
+    color: $white
+    &:hover
+      text-decoration: none
+    .title
+      position: absolute
+      left: 26px
+      right: 55px
+      line-height: 2.5rem
+      margin: 0
+      bottom: 49px
+      z-index: 3
+    .update
+      font-weight: bold
+      opacity: .5
+      position: absolute
+      bottom: 26px
+      left: 26px
+      right: 55px
+      z-index: 3
+#gallery-slider
+  .slick-list
+    padding-bottom: 13px !important
+  .slick-slide
+    transform: scale(1, 0.9)
+    transition: all .3s
+    .pic
+        .title,.update
+          display: none
+    &.slick-active 
+      transform: scale(1)
+      .pic
+        .title,.update
+          display: block
+
 @media (max-width: 1199px)
   #gallery-n-documents
     background-image: linear-gradient(to bottom, #287dc3 446px, #eaeaef 0)
