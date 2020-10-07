@@ -5,28 +5,46 @@
 		&:hover
 	    	background: rgba(69,145,251, .1) !important
 
-.pagination .previous img
-	margin-right: 10px
-	vertical-align: baseline
+.pagination 
+	.previous
+		position: relative
+		padding: 1.9rem 2rem 1.7rem 3.8rem
+		span
+			display: inline-block
+		img
+			top: 50%
+			transform: translate(0,-50%)
+			left: 16px		
+			position: absolute
+			vertical-align: baseline
 
-.pagination .next img
-	margin-left: 10px
-	vertical-align: baseline
+.pagination
+	.next
+		padding: 1.9rem 3.8rem 1.7rem 2rem
+		position: relative
+		span
+			display: inline-block
+		img
+			top: 50%
+			transform: translate(0,-50%)
+			right: 16px
+			position: absolute
+			vertical-align: baseline
 
 .pagination
 	ul
 		li
-			color: $light-blue
+			color: $blue
 			height: 39px
 			width: 39px
 			line-height: 3.9rem
 			text-align: center
 			&.active
-				background: $light-blue
+				background: $blue
 				color: $white
 				border-radius: 50%
 			a
-				color: $light-blue
+				color: $blue
 
 @media (max-width: $layout-breakpoint-xsmall)
 	.pagination .previous 
