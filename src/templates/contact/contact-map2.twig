@@ -43,32 +43,3 @@
   </div>
   
 </div>
-{% block footer %}
-<script>
-// Initialize and add the map
-function initMap() {
-  // The location of Uluru
-  var uluru = {lat: 47.007724, lng: 28.82637};
-  // The map, centered at Uluru
-  var map = new google.maps.Map(
-      document.getElementById('map'), {zoom: 15, center: uluru});
-  // The marker, positioned at Uluru
-  var marker = new google.maps.Marker({
-    position: uluru, map: map,
-    icon: {
-      url: 'https://maps.gstatic.com/mapfiles/api-3/images/spotlight-poi2.png',
-      labelOrigin: new google.maps.Point(100, 32)
-    },
-    label: {
-      text: 'str. Vasile Alecsandri, 1',
-      color: '#C70E20',
-      fontSize: '14px',
-      fontWeight: 'bold'
-    }
-  });
-}
-    </script>
-<script defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD9CYp5__wLw5nQf3qTPLlMZBfXXybupYQ&callback=initMap">
-    </script>
-{% endblock %}
