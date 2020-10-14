@@ -22,61 +22,118 @@
 {% block javascripts %}
 <script>
   function initMap(message) {
-  // Locations: [title, lat, long, number]
-var locations = [
-  ['Şoldăneşti', 47.9338802, 28.5491323, 9, '<div class=\"map-info-wrap\"><strong>Şoldăneşti</strong><br><p><span>Șef STO:</span><br> Danalachi Angela</p><p><span>Adresa:</span><br>7300, or. Cantemir, str.<br> Trandafirilor,2</p><p><span>Tel:</span><br>273-23300, 22541</p><p><span>E-mail:</span><br><a href=\"mailto:angela.danalachi@anofm.md\">angela.danalachi@anofm.md</a><br><a href=\"mailto:aofm.сantemir@anofm.md\"> aofm.сantemir@anofm.md</a></p></div>'],
-  ['Ştefan Vodă', 46.8463142, 29.3243123, 9, '<div class=\"map-info-wrap\"><strong>Ştefan Vodă</strong><br><p><span>Șef STO:</span><br> Danalachi Angela</p><p><span>Adresa:</span><br>7300, or. Cantemir, str.<br> Trandafirilor,2</p><p><span>Tel:</span><br>273-23300, 22541</p><p><span>E-mail:</span><br><a href=\"mailto:angela.danalachi@anofm.md\">angela.danalachi@anofm.md</a><br><a href=\"mailto:aofm.сantemir@anofm.md\"> aofm.сantemir@anofm.md</a></p></div>'],
-  ['Taraclia', 45.9071143,28.6515282,9, '<div class=\"map-info-wrap\"><strong>Taraclia</strong><br><p><span>Șef STO:</span><br> Danalachi Angela</p><p><span>Adresa:</span><br>7300, or. Cantemir, str.<br> Trandafirilor,2</p><p><span>Tel:</span><br>273-23300, 22541</p><p><span>E-mail:</span><br><a href=\"mailto:angela.danalachi@anofm.md\">angela.danalachi@anofm.md</a><br><a href=\"mailto:aofm.сantemir@anofm.md\"> aofm.сantemir@anofm.md</a></p></div>'],
-  ['Anenii Noi', 46.8783797,29.2205212, 9, '<div class=\"map-info-wrap\"><strong>Anenii Noi</strong><br><p><span>Șef STO:</span><br> Danalachi Angela</p><p><span>Adresa:</span><br>7300, or. Cantemir, str.<br> Trandafirilor,2</p><p><span>Tel:</span><br>273-23300, 22541</p><p><span>E-mail:</span><br><a href=\"mailto:angela.danalachi@anofm.md\">angela.danalachi@anofm.md</a><br><a href=\"mailto:aofm.сantemir@anofm.md\"> aofm.сantemir@anofm.md</a></p></div>'],
-  ['Teleneşti', 47.5018475,28.34522, 9, '<div class=\"map-info-wrap\"><strong>Teleneşti</strong><br><p><span>Șef STO:</span><br> Danalachi Angela</p><p><span>Adresa:</span><br>7300, or. Cantemir, str.<br> Trandafirilor,2</p><p><span>Tel:</span><br>273-23300, 22541</p><p><span>E-mail:</span><br><a href=\"mailto:angela.danalachi@anofm.md\">angela.danalachi@anofm.md</a><br><a href=\"mailto:aofm.сantemir@anofm.md\"> aofm.сantemir@anofm.md</a></p></div>'],
-  ['Basarabeasca', 46.3330282,28.9542747, 9, '<div class=\"map-info-wrap\"><strong>Basarabeasca</strong><br><p><span>Șef STO:</span><br> Danalachi Angela</p><p><span>Adresa:</span><br>7300, or. Cantemir, str.<br> Trandafirilor,2</p><p><span>Tel:</span><br>273-23300, 22541</p><p><span>E-mail:</span><br><a href=\"mailto:angela.danalachi@anofm.md\">angela.danalachi@anofm.md</a><br><a href=\"mailto:aofm.сantemir@anofm.md\"> aofm.сantemir@anofm.md</a></p></div>'],
-  ['Ungheni', 47.209235,27.7585786, 9, '<div class=\"map-info-wrap\"><strong>Ungheni</strong><br><p><span>Șef STO:</span><br> Danalachi Angela</p><p><span>Adresa:</span><br>7300, or. Cantemir, str.<br> Trandafirilor,2</p><p><span>Tel:</span><br>273-23300, 22541</p><p><span>E-mail:</span><br><a href=\"mailto:angela.danalachi@anofm.md\">angela.danalachi@anofm.md</a><br><a href=\"mailto:aofm.сantemir@anofm.md\"> aofm.сantemir@anofm.md</a></p></div>'],
-  ['UTA Găgăuzia', 45.9823904,28.0812283, 9, '<div class=\"map-info-wrap\"><strong>UTA Găgăuzia</strong><br><p><span>Șef STO:</span><br> Danalachi Angela</p><p><span>Adresa:</span><br>7300, or. Cantemir, str.<br> Trandafirilor,2</p><p><span>Tel:</span><br>273-23300, 22541</p><p><span>E-mail:</span><br><a href=\"mailto:angela.danalachi@anofm.md\">angela.danalachi@anofm.md</a><br><a href=\"mailto:aofm.сantemir@anofm.md\"> aofm.сantemir@anofm.md</a></p></div>'],
-  ['Cahul', 45.9080387,28.167915, 9, '<div class=\"map-info-wrap\"><strong>Cahul</strong><br><p><span>Șef STO:</span><br> Danalachi Angela</p><p><span>Adresa:</span><br>7300, or. Cantemir, str.<br> Trandafirilor,2</p><p><span>Tel:</span><br>273-23300, 22541</p><p><span>E-mail:</span><br><a href=\"mailto:angela.danalachi@anofm.md\">angela.danalachi@anofm.md</a><br><a href=\"mailto:aofm.сantemir@anofm.md\"> aofm.сantemir@anofm.md</a></p></div>']
-];
-var gmarkers = [];
-// Map Settings
-var map = new google.maps.Map(document.getElementById("map"), {
-  zoom: 7,
-  center: new google.maps.LatLng(47.007724, 28.82637),
-  mapTypeId: google.maps.MapTypeId.ROADMAP
-});
-
-var infowindow = new google.maps.InfoWindow({
-                content: message/*,
-                pixelOffset: new google.maps.Size(300, -10)*/
-            }); 
-
-var marker, i;
-for (i = 0; i < locations.length; i++) {
-  marker = new google.maps.Marker({
-    position: new google.maps.LatLng(locations[i][1], locations[i][2]),
-    map: map,
-    icon: {
-      url: 'https://maps.gstatic.com/mapfiles/api-3/images/spotlight-poi2.png',
-      labelOrigin: new google.maps.Point(100, 32)
-    }
-  });
-  gmarkers.push(marker);
-  google.maps.event.addListener(marker, 'click', (function(marker, i) {
-    return function() {
-      infowindow.setContent(locations[i][4]);
-      infowindow.open(map, marker);
-    }
-  })(marker, i));
-}
-$('.nav-map a').each(function(i, e) {
-  $(e).click(function(i) {
-    return function(e) {
-      e.preventDefault();
-      $('.nav-map a').removeClass('active');
-      $(this).addClass('active');
-      google.maps.event.trigger(gmarkers[i], 'click');
-    }
-  }(i));
-});
-}
  
+
+
+var gmarkers1 = [];
+var markers1 = [];
+var infowindow = new google.maps.InfoWindow({
+    content: ''
+});
+
+// Our markers
+markers1 = [
+    ['0', '<div class=\"map-info-wrap\"><strong>Şoldăneşti</strong><br><p><span>Șef STO:</span><br> Danalachi Angela</p><p><span>Adresa:</span><br>7300, or. Cantemir, str.<br> Trandafirilor,2</p><p><span>Tel:</span><br>273-23300, 22541</p><p><span>E-mail:</span><br><a href=\"mailto:angela.danalachi@anofm.md\">angela.danalachi@anofm.md</a><br><a href=\"mailto:aofm.сantemir@anofm.md\"> aofm.сantemir@anofm.md</a></p></div>', 47.9338802, 28.5491323, 'soldanesti'],
+    ['1', '<div class=\"map-info-wrap\"><strong>Şoldăneşti</strong><br><p><span>Șef STO:</span><br> Danalachi Angela</p><p><span>Adresa:</span><br>7300, or. Cantemir, str.<br> Trandafirilor,2</p><p><span>Tel:</span><br>273-23300, 22541</p><p><span>E-mail:</span><br><a href=\"mailto:angela.danalachi@anofm.md\">angela.danalachi@anofm.md</a><br><a href=\"mailto:aofm.сantemir@anofm.md\"> aofm.сantemir@anofm.md</a></p></div>', 47.9338802, 27.5491323, 'soldanesti'],
+    ['2', '<div class=\"map-info-wrap\"><strong>Şoldăneşti</strong><br><p><span>Șef STO:</span><br> Danalachi Angela</p><p><span>Adresa:</span><br>7300, or. Cantemir, str.<br> Trandafirilor,2</p><p><span>Tel:</span><br>273-23300, 22541</p><p><span>E-mail:</span><br><a href=\"mailto:angela.danalachi@anofm.md\">angela.danalachi@anofm.md</a><br><a href=\"mailto:aofm.сantemir@anofm.md\"> aofm.сantemir@anofm.md</a></p></div>', 46.8463142, 29.3243123, 'stefan-voda'],
+    ['3', '<div class=\"map-info-wrap\"><strong>Şoldăneşti</strong><br><p><span>Șef STO:</span><br> Danalachi Angela</p><p><span>Adresa:</span><br>7300, or. Cantemir, str.<br> Trandafirilor,2</p><p><span>Tel:</span><br>273-23300, 22541</p><p><span>E-mail:</span><br><a href=\"mailto:angela.danalachi@anofm.md\">angela.danalachi@anofm.md</a><br><a href=\"mailto:aofm.сantemir@anofm.md\"> aofm.сantemir@anofm.md</a></p></div>', 46.8783797,29.2205212, 'stefan-voda'],
+    ['4', '<div class=\"map-info-wrap\"><strong>Şoldăneşti</strong><br><p><span>Șef STO:</span><br> Danalachi Angela</p><p><span>Adresa:</span><br>7300, or. Cantemir, str.<br> Trandafirilor,2</p><p><span>Tel:</span><br>273-23300, 22541</p><p><span>E-mail:</span><br><a href=\"mailto:angela.danalachi@anofm.md\">angela.danalachi@anofm.md</a><br><a href=\"mailto:aofm.сantemir@anofm.md\"> aofm.сantemir@anofm.md</a></p></div>', 45.9071143,28.6515282, 'taraclia'],
+    ['5', '<div class=\"map-info-wrap\"><strong>Şoldăneşti</strong><br><p><span>Șef STO:</span><br> Danalachi Angela</p><p><span>Adresa:</span><br>7300, or. Cantemir, str.<br> Trandafirilor,2</p><p><span>Tel:</span><br>273-23300, 22541</p><p><span>E-mail:</span><br><a href=\"mailto:angela.danalachi@anofm.md\">angela.danalachi@anofm.md</a><br><a href=\"mailto:aofm.сantemir@anofm.md\"> aofm.сantemir@anofm.md</a></p></div>', 45.9071143,28.7515282, 'taraclia'],
+    ['5', '<div class=\"map-info-wrap\"><strong>Şoldăneşti</strong><br><p><span>Șef STO:</span><br> Danalachi Angela</p><p><span>Adresa:</span><br>7300, or. Cantemir, str.<br> Trandafirilor,2</p><p><span>Tel:</span><br>273-23300, 22541</p><p><span>E-mail:</span><br><a href=\"mailto:angela.danalachi@anofm.md\">angela.danalachi@anofm.md</a><br><a href=\"mailto:aofm.сantemir@anofm.md\"> aofm.сantemir@anofm.md</a></p></div>', 47.5018475,28.34522, 'taraclia'],
+    ['5', '<div class=\"map-info-wrap\"><strong>Şoldăneşti</strong><br><p><span>Șef STO:</span><br> Danalachi Angela</p><p><span>Adresa:</span><br>7300, or. Cantemir, str.<br> Trandafirilor,2</p><p><span>Tel:</span><br>273-23300, 22541</p><p><span>E-mail:</span><br><a href=\"mailto:angela.danalachi@anofm.md\">angela.danalachi@anofm.md</a><br><a href=\"mailto:aofm.сantemir@anofm.md\"> aofm.сantemir@anofm.md</a></p></div>', 46.3330282,28.9542747,'taraclia'],
+    ['5', '<div class=\"map-info-wrap\"><strong>Şoldăneşti</strong><br><p><span>Șef STO:</span><br> Danalachi Angela</p><p><span>Adresa:</span><br>7300, or. Cantemir, str.<br> Trandafirilor,2</p><p><span>Tel:</span><br>273-23300, 22541</p><p><span>E-mail:</span><br><a href=\"mailto:angela.danalachi@anofm.md\">angela.danalachi@anofm.md</a><br><a href=\"mailto:aofm.сantemir@anofm.md\"> aofm.сantemir@anofm.md</a></p></div>', 47.209235,27.7585786, 'taraclia'],
+    ['5', '<div class=\"map-info-wrap\"><strong>Şoldăneşti</strong><br><p><span>Șef STO:</span><br> Danalachi Angela</p><p><span>Adresa:</span><br>7300, or. Cantemir, str.<br> Trandafirilor,2</p><p><span>Tel:</span><br>273-23300, 22541</p><p><span>E-mail:</span><br><a href=\"mailto:angela.danalachi@anofm.md\">angela.danalachi@anofm.md</a><br><a href=\"mailto:aofm.сantemir@anofm.md\"> aofm.сantemir@anofm.md</a></p></div>', 45.9823904,28.0812283, 'taraclia'],
+    ['5', '<div class=\"map-info-wrap\"><strong>Şoldăneşti</strong><br><p><span>Șef STO:</span><br> Danalachi Angela</p><p><span>Adresa:</span><br>7300, or. Cantemir, str.<br> Trandafirilor,2</p><p><span>Tel:</span><br>273-23300, 22541</p><p><span>E-mail:</span><br><a href=\"mailto:angela.danalachi@anofm.md\">angela.danalachi@anofm.md</a><br><a href=\"mailto:aofm.сantemir@anofm.md\"> aofm.сantemir@anofm.md</a></p></div>', 45.9080387,28.167915, 'taraclia']
+];
+
+/**
+ * Function to init map
+ */
+
+function initialize() {
+    var center = new google.maps.LatLng( 47.007724, 28.82637);
+    var mapOptions = {
+        zoom: 7,
+        center: center,
+        mapTypeId: google.maps.MapTypeId.TERRAIN
+    };
+
+    map = new google.maps.Map(document.getElementById('map'), mapOptions);
+    for (i = 0; i < markers1.length; i++) {
+        addMarker(markers1[i]);
+    }
+}
+
+/**
+ * Function to add marker to map
+ */
+
+function addMarker(marker) {
+    var category = marker[4];
+    var title = marker[1];
+    var pos = new google.maps.LatLng(marker[2], marker[3]);
+    var content = marker[1];
+
+    marker1 = new google.maps.Marker({
+        title: title,
+        position: pos,
+        category: category,
+        map: map
+    });
+
+    gmarkers1.push(marker1);
+
+    // Marker click listener
+    google.maps.event.addListener(marker1, 'click', (function (marker1, content) {
+        return function () {
+            infowindow.setContent(content);
+            infowindow.open(map, marker1);
+            map.panTo(this.getPosition());
+            map.setZoom(15);
+        }
+    })(marker1, content));
+}
+
+/**
+ * Function to filter markers by category
+ */
+
+filterMarkers = function(category)
+{
+    var bounds = new google.maps.LatLngBounds();
+    for (i = 0; i < gmarkers1.length; i++) {
+        marker = gmarkers1[i];
+
+        // If is same category or category not picked
+        if(marker.category == category || category.length == 0)
+        {
+            marker.setVisible(true);
+            bounds.extend(marker.getPosition());
+        }
+        // Categories don't match 
+        else
+        {          
+            marker.setVisible(false);
+        }
+        map.fitBounds(bounds);
+    }
+    
+    
+
+}
+
+// Init map
+initialize();
+
+
+}
+ $('.nav-location').on('click',function(){
+      if($(this).find('input:radio').is(':checked')){
+        $(this).addClass('active')
+      }else{
+        $('.nav-location').removeClass('active');    
+      }
+    });
     </script>
 <script defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD9CYp5__wLw5nQf3qTPLlMZBfXXybupYQ&callback=initMap">
