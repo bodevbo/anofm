@@ -260,3 +260,15 @@ if ($('#a-slider')[0]){
 $('.btn-mobile').click(function(){
     $(this).toggleClass('on')    
 });
+
+$('.search-bar .btn-close').on('click', function (e) {
+    e.preventDefault();
+    $(this).parents('li.dropdown').toggleClass('open');
+});
+
+
+$('.focus-to').on('click', function () {
+    setTimeout(function(){
+        $('input.focus-in').focus();
+    }, 700);
+});

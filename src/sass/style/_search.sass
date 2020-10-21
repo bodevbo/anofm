@@ -1,0 +1,67 @@
+.search-bar
+  width: 100% !important
+  position: absolute !important
+  top: 14px
+  right: 7px !important
+  height: 43px
+  padding: 0
+  margin: 0
+  border: 1px solid $light-gray !important
+  background-color: $white !important
+  border-radius: 4px !important
+  .form-control
+    height: 41px
+    border: none
+    box-shadow: none
+    padding: 0 0 0 14px
+
+  .form-group
+    margin: 0
+    position: relative
+    width: calc(100% - 75px)
+    label
+      display: block
+      margin: 0
+      font-weight: normal
+  .btn-close
+    position: absolute
+    right: -35px
+    top: 0
+    height: 41px
+    width: 35px
+    text-align: center
+    line-height: 39px 
+    img
+      height: 15px
+      display: inline-block
+
+  .btn
+    padding: 10px 12px 9px 13px
+    border-radius: 0 3px 3px 0
+    margin: 0
+    height: 41px
+    border: none
+    outline: none !important
+    &:hover
+      background-color: $light-gray-hover !important
+
+@media (max-width: $layout-breakpoint-md)
+  .search-bar
+    top: -10px
+    li
+      display: block
+      width: 100%
+
+@media (max-width: 890px)
+  .search-bar
+    top: -5px
+
+@media (max-width: $layout-breakpoint-xsmall)
+  .search-bar
+    max-width: 260px
+    left: 50%
+    top: 5px
+    transform: translate(-50%,0)
+    .btn
+      padding-left: 14px
+      padding-right: 11px

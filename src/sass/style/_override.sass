@@ -32,6 +32,11 @@
   display: flex
   align-items: center
 
+.dropdown.open:after
+  display: none
+
+.navbar-nav
+  position: relative
 .navbar-default .navbar-nav
   &:before, &:after
     content: none
@@ -41,10 +46,10 @@
       font-size: 1.2rem
       font-weight: 700
       letter-spacing: 0.089rem
-      text-transform: uppercase
       color: #287dc3
       padding: 0 20px
-      border-right: 1px solid rgba(0, 0, 0, 0.1)
+      background: transparent !important
+      border-right: 1px solid rgba(0, 0, 0, 0.1) !important
 
     //margin-left    : 1.6rem;
 
@@ -54,6 +59,33 @@
     &.lang > a
       color: $dark-gray
 
+    &.lang
+      &:after
+        display: none !important
+      ul
+        background-color: $white
+        width: 109px
+        min-width: inherit
+        border: none !important
+        padding-top: 20px
+        box-shadow: 0 20px 10px rgba(0,0,0, .16)
+        position: absolute
+        z-index: 9
+        li
+          a
+            padding-top: 8px
+            padding-bottom: 8px
+            &:hover
+              background: $light-gray-hover
+            &:before
+              display: none
+          &.active
+            a
+              cursor: default
+              background: transparent
+              color: $dark-gray
+              font-weight: bold
+
 hr
   border-color: $white
   opacity: 0.2
@@ -62,6 +94,15 @@ hr
 ul
   list-style: none
   padding-left: 0
+
+#main-menu
+  &.in
+    overflow: visible
+  .nav
+    > li:last-child
+        position: static
+        a
+          border-right: 0!important
 
 .d-flex
   display: flex
